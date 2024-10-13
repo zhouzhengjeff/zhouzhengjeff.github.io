@@ -33,9 +33,9 @@ tags:
 
 在 Cubox 或 Raindrop App 里，我会看到当天保存下来的素材。这些数据上一定会有 Tag 或 Comment，而且可以看到它属于哪个分类。如果没有所属分类我定会 resove it，让它要有所属分类。这个工作你必须擅长去做，不要怕麻烦。因为我稍后去写笔记一定会有专题或所谓的类别，那么我只会在某一个分类里面找到相应的素材，然后进行组织。这样就会大大加快我的工作效率
 
-![image.png](/img/blog-cubox.png)
 
-![image.png](/img/blog-raindrop.png)
+
+
 
 ### Intensive Reading（精读）
 
