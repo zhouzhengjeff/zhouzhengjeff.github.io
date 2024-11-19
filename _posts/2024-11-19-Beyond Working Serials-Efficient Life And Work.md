@@ -72,7 +72,7 @@ tags:
 > 一小时阅读其他书籍，伴随着阅读入眠。
 > 结束一天前，再次复习信条。
 
-![高效工作与生活](/images/Beyond Working Serials/03/Efficient.jpg)
+![高效工作与生活](/images/Beyond_Working_Serials/03/Efficient.jpg)
 
 # 总结
 
