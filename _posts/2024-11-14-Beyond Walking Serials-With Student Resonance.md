@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Beyond Walking Serials-与学生的共鸣"
+title: "Beyond Working Serials-与学生的共鸣"
 author: "Zhouzheng"
 header-style: text
 catalog: true
@@ -11,7 +11,7 @@ tags:
   - 教育的意义
 ---
 
-# Beyond Walking Serials-与学生的共鸣
+# Beyond Working Serials-与学生的共鸣
 
 # 不一样的早上
 

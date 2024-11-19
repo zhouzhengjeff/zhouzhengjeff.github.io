@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Beyond Walking Serials-高效工作与生活的典范"
+title: "Beyond Working Serials-高效工作与生活的典范"
 author: "Zhouzheng"
 header-style: text
 catalog: true
