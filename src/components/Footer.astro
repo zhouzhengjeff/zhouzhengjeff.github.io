@@ -1,0 +1,130 @@
+---
+import { SITE } from '../consts';
+import { withBase } from '../utils';
+import Icon from './Icon.astro';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="f-brand">
+      <p class="sig" aria-label="签名 Zheng Zhou">Zheng Zhou</p>
+      <p class="f-desc">程序员 · Java &amp; AI Agent 讲师 · 创作者<br />化繁为简，把技术讲明白。</p>
+    </div>
+    <ul class="f-links">
+      <li><a href={SITE.github} target="_blank" rel="noopener"><Icon name="github" /> GitHub</a></li>
+      <li><a href={SITE.x} target="_blank" rel="noopener"><Icon name="x" /> {SITE.xHandle}</a></li>
+      <li><a href={`mailto:${SITE.email}`}><Icon name="mail" /> {SITE.email}</a></li>
+      <li><a href={withBase('/rss.xml')}><Icon name="rss" /> RSS</a></li>
+    </ul>
+  </div>
+  <div class="container f-bottom">
+    <span>© {year} 周正 Zheng Zhou. All rights reserved.</span>
+    <span>Built with Astro · Hosted on GitHub Pages</span>
+  </div>
+  <a href="#top" class="to-top" id="to-top" aria-label="回到顶部"><Icon name="up" /></a>
+</footer>
+
+<style>
+  .site-footer {
+    position: relative;
+    margin-top: 40px;
+    border-top: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(10, 16, 41, 0.4), rgba(5, 8, 22, 1));
+  }
+  .site-footer::before {
+    content: '';
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: -1px;
+    height: 1px;
+    background: var(--grad);
+    opacity: 0.7;
+  }
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 28px;
+    padding-block: 48px 28px;
+  }
+  .sig {
+    margin: 0;
+    font-family: var(--font-sig);
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1.3;
+    padding: 0 0.15em 0.1em 0;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .f-desc {
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .f-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    align-content: start;
+  }
+  .f-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 14.5px;
+    transition: color 0.2s;
+    overflow-wrap: anywhere;
+  }
+  .f-links a:hover {
+    color: #fff;
+  }
+  .f-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    padding-block: 18px 28px;
+    border-top: 1px solid rgba(128, 146, 255, 0.08);
+    color: var(--faint);
+    font-size: 13px;
+  }
+  .to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 22px;
+    z-index: 40;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    color: #fff;
+    background: rgba(20, 28, 64, 0.85);
+    border: 1px solid var(--border-strong);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  .to-top.show {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+  .to-top:hover {
+    box-shadow: var(--glow);
+  }
+</style>
+
+<script>
+  const t = document.getElementById('to-top')!;
+  window.addEventListener('scroll', () => t.classList.toggle('show', window.scrollY > 600), { passive: true });
+</script>

@@ -1,0 +1,408 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import PostCard from '../components/PostCard.astro';
+import VideoCard from '../components/VideoCard.astro';
+import VideoPlayer from '../components/VideoPlayer.astro';
+import ChannelStats from '../components/ChannelStats.astro';
+import { VIDEOS } from '../data/videos';
+import Icon from '../components/Icon.astro';
+import { ABOUT } from '../data/about';
+import { SERIES, SITE, SKILLS, type SeriesKey } from '../consts';
+import { allTags, getPosts, postUrl, withBase, formatDate } from '../utils';
+
+const posts = await getPosts();
+const featured = posts.slice(0, 6);
+const tags = allTags(posts);
+const seriesKeys = Object.keys(SERIES) as SeriesKey[];
+const bySeries = seriesKeys.map((k) => ({ key: k, ...SERIES[k], posts: posts.filter((p) => p.data.series === k) }));
+const latestVideos = VIDEOS.slice(0, 8);
+const aboutLead = ABOUT.slice(1, 4);
+const values = [
+  { en: 'Perseverance', zh: '执着', text: '以工匠精神投入课研，扎扎实实做好教学。' },
+  { en: 'Focus', zh: '专注', text: '读源码、画图、重构——把复杂变成容易读懂、容易修改。' },
+  { en: 'Persist', zh: '坚持', text: '不断突破、与时俱进，持续把新东西分享给听众。' },
+];
+---
+<BaseLayout>
+  <Hero postCount={posts.length} tagCount={tags.length} videoCount={VIDEOS.length} />
+
+  <!-- 关于 -->
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="container about-grid">
+      <div>
+        <div class="section-head reveal">
+          <span class="eyebrow">About Me</span>
+          <h2 class="section-title" id="about-title">一个 <span class="grad-text">Java 布道者</span></h2>
+          <p class="section-desc">{ABOUT[0]}</p>
+        </div>
+        <div class="about-text reveal" style="--d:.1s">
+          {aboutLead.map((p) => <p>{p}</p>)}
+        </div>
+        <a class="btn reveal" style="--d:.16s; margin-top: 24px" href={withBase('/about/')}>更多关于我 <Icon name="arrow" /></a>
+      </div>
+      <div class="values">
+        {values.map((v, i) => (
+          <div class="card value-card reveal" data-tilt style={`--d:${0.08 * i}s`}>
+            <span class="v-num">0{i + 1}</span>
+            <div>
+              <h3>{v.zh} <small>{v.en}</small></h3>
+              <p>{v.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 技能 -->
+  <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Tech Stack</span>
+        <h2 class="section-title" id="skills-title">技术栈 &amp; 工具箱</h2>
+        <p class="section-desc">从 Java 微服务到 AI Agent，从课堂到生产——我教的，也是我每天在用的。</p>
+      </div>
+      <div class="grid grid-3">
+        {SKILLS.map((g, i) => (
+          <div class="card skill-card reveal" data-tilt style={`--d:${0.08 * i}s`}>
+            <h3><span class="skill-dot" aria-hidden="true"></span>{g.group}</h3>
+            <ul class="badges">
+              {g.items.map((s) => <li class="badge">{s}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 视频号 -->
+  <section class="section" id="videos" aria-labelledby="videos-title">
+    <div class="container">
+      <div class="head-row">
+        <div class="section-head reveal">
+          <span class="eyebrow">WeChat Channels</span>
+          <h2 class="section-title" id="videos-title">视频号 · <span class="grad-text">AI 讲解</span></h2>
+          <p class="section-desc">几分钟讲清一个 AI 概念——Agent、Claude Code、RAG 与每日 GitHub 热榜。</p>
+        </div>
+        <a class="btn reveal hide-sm-btn" href={withBase('/videos/')}>全部视频 <Icon name="arrow" /></a>
+      </div>
+      <ChannelStats />
+      <div class="video-grid home-videos">
+        {latestVideos.map((v, i) => <VideoCard video={v} delay={0.05 * (i % 4)} />)}
+      </div>
+      <div class="more-row reveal">
+        <a class="btn btn-primary" href={withBase('/videos/')}><Icon name="film" /> 查看全部 {VIDEOS.length} 个视频 <Icon name="arrow" /></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新文章 -->
+  <section class="section section-alt" id="posts" aria-labelledby="posts-title">
+    <div class="container">
+      <div class="head-row">
+        <div class="section-head reveal">
+          <span class="eyebrow">Latest Posts</span>
+          <h2 class="section-title" id="posts-title">最新文章</h2>
+          <p class="section-desc">代码之外的思考、日常与成长。</p>
+        </div>
+        <a class="btn reveal" href={withBase('/blog/')}>全部文章 <Icon name="arrow" /></a>
+      </div>
+      <div class="grid grid-3">
+        {featured.map((p, i) => <PostCard post={p} delay={0.06 * (i % 3)} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- 系列 -->
+  <section class="section" id="series" aria-labelledby="series-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Series</span>
+        <h2 class="section-title" id="series-title">博客系列</h2>
+        <p class="section-desc">按主题归档的长期写作。</p>
+      </div>
+      <div class="grid grid-2">
+        {bySeries.map((s, i) => (
+          <div class="card series-card reveal" data-tilt style={`--d:${0.06 * i}s`}>
+            <div class="series-head">
+              <span class="series-icon" aria-hidden="true"><Icon name={s.icon} size={24} /></span>
+              <div>
+                <h3>{s.title}</h3>
+                <p class="series-en">{s.en} · {s.posts.length} 篇</p>
+              </div>
+            </div>
+            <p class="series-desc">{s.desc}</p>
+            <ol class="series-list">
+              {s.posts.slice(0, 4).map((p) => (
+                <li>
+                  <a href={postUrl(p)}>
+                    <span class="sl-title">{p.data.title}</span>
+                    <time datetime={p.data.date.toISOString()}>{formatDate(p.data.date)}</time>
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="contact card reveal">
+        <div class="contact-glow" aria-hidden="true"></div>
+        <span class="eyebrow">Contact</span>
+        <h2 class="section-title" id="contact-title">一起聊聊 <span class="grad-text">代码、教学与 AI</span></h2>
+        <p class="section-desc">课程合作、技术交流、播客嘉宾，或者只是打个招呼，都欢迎。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href={`mailto:${SITE.email}`}><Icon name="mail" /> {SITE.email}</a>
+          <a class="btn" href={SITE.github} target="_blank" rel="noopener"><Icon name="github" /> GitHub</a>
+          <a class="btn" href={SITE.x} target="_blank" rel="noopener"><Icon name="x" /> {SITE.xHandle}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <VideoPlayer />
+</BaseLayout>
+
+<style>
+  .section-alt {
+    background: linear-gradient(180deg, transparent, rgba(14, 22, 56, 0.45) 20%, rgba(14, 22, 56, 0.45) 80%, transparent);
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: clamp(28px, 5vw, 64px);
+    align-items: center;
+  }
+  .about-text p {
+    margin: 0 0 12px;
+    color: #d3d8ef;
+    font-size: 16.5px;
+    line-height: 1.85;
+    max-width: 60ch;
+  }
+  .values {
+    display: grid;
+    gap: 16px;
+  }
+  .value-card {
+    display: flex;
+    gap: 18px;
+    padding: 22px 24px;
+    align-items: flex-start;
+  }
+  .v-num {
+    font-family: var(--font-mono);
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .value-card h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    color: #fff;
+  }
+  .value-card h3 small {
+    margin-left: 6px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--accent-3);
+    font-family: var(--font-mono);
+  }
+  .value-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14.5px;
+  }
+  .skill-card {
+    padding: 24px;
+  }
+  .skill-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 18px;
+    font-size: 18px;
+    color: #fff;
+  }
+  .skill-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background: var(--grad);
+    box-shadow: 0 0 12px rgba(140, 120, 255, 0.8);
+  }
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .badge {
+    padding: 7px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 550;
+    color: #e2e6ff;
+    background: rgba(124, 140, 255, 0.09);
+    border: 1px solid rgba(124, 140, 255, 0.22);
+    transition: transform 0.2s, background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  }
+  .badge:hover {
+    transform: translateY(-2px);
+    background: rgba(124, 140, 255, 0.2);
+    border-color: var(--accent);
+    box-shadow: 0 6px 20px -8px rgba(124, 140, 255, 0.8);
+  }
+  .head-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: clamp(28px, 4vw, 48px);
+  }
+  .head-row .section-head {
+    margin-bottom: 0;
+  }
+  .home-videos {
+    margin-top: clamp(20px, 3vw, 32px);
+  }
+  .more-row {
+    display: flex;
+    justify-content: center;
+    margin-top: clamp(28px, 4vw, 40px);
+  }
+  @media (max-width: 640px) {
+    .hide-sm-btn {
+      display: none;
+    }
+  }
+  .series-card {
+    padding: 24px;
+  }
+  .series-head {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+  .series-icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    flex: none;
+    color: #b9c2ff;
+    border-radius: 14px;
+    background: rgba(124, 140, 255, 0.12);
+    border: 1px solid var(--border);
+  }
+  .series-card h3 {
+    margin: 0;
+    font-size: 19px;
+    color: #fff;
+  }
+  .series-en {
+    margin: 2px 0 0;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--accent-3);
+  }
+  .series-desc {
+    margin: 14px 0 10px;
+    color: var(--muted);
+    font-size: 14.5px;
+  }
+  .series-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: s;
+  }
+  .series-list li {
+    counter-increment: s;
+    border-top: 1px solid rgba(128, 146, 255, 0.1);
+  }
+  .series-list a {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 14.5px;
+    color: #d3d8ef;
+    transition: color 0.2s, padding 0.2s;
+  }
+  .series-list a::before {
+    content: counter(s, decimal-leading-zero);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--faint);
+  }
+  .series-list a:hover {
+    color: #fff;
+    padding-left: 6px;
+  }
+  .sl-title {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .series-list time {
+    font-size: 12.5px;
+    color: var(--faint);
+    font-family: var(--font-mono);
+  }
+  .contact {
+    padding: clamp(32px, 6vw, 64px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact .section-desc {
+    max-width: 560px;
+  }
+  .contact-glow {
+    position: absolute;
+    inset: -40% -10% auto;
+    height: 120%;
+    background: radial-gradient(ellipse at 50% 0%, rgba(124, 92, 255, 0.35), transparent 60%);
+    pointer-events: none;
+  }
+  .cta-row {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .cta-row .btn {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  @media (max-width: 820px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 480px) {
+    .series-list time {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,247 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Toc from '../../components/Toc.astro';
+import Icon from '../../components/Icon.astro';
+import { SERIES } from '../../consts';
+import { formatDateZh, getPosts, postUrl, readingTime, tagUrl, withBase, type Post } from '../../utils';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post, i) => ({
+    params: { slug: post.id },
+    props: { post, newer: posts[i - 1], older: posts[i + 1] },
+  }));
+}
+interface Props {
+  post: Post;
+  newer?: Post;
+  older?: Post;
+}
+const { post, newer, older } = Astro.props;
+const { Content, headings } = await render(post);
+const { title, date, description, tags, series, cover } = post.data;
+const rt = readingTime(post.body);
+const s = series ? SERIES[series] : undefined;
+---
+<BaseLayout title={title} description={description || title} type="article" publishedTime={date} tags={tags} image={cover?.src}>
+  <article class="post">
+    <header class="post-hero page-hero">
+      <div class="container narrow">
+        <nav class="crumbs" aria-label="面包屑">
+          <a href={withBase('/')}>首页</a><span aria-hidden="true">/</span><a href={withBase('/blog/')}>博客</a>
+          {s && (<><span aria-hidden="true">/</span><span>{s.title}</span></>)}
+        </nav>
+        <h1>{title}</h1>
+        <div class="post-meta">
+          <span><Icon name="calendar" size={15} /> <time datetime={date.toISOString()}>{formatDateZh(date)}</time></span>
+          <span><Icon name="clock" size={15} /> 约 {rt.minutes} 分钟 · {rt.words.toLocaleString('zh-CN')} 字</span>
+          <span><Icon name="user" size={15} /> 周正</span>
+        </div>
+        <ul class="tag-list">
+          {tags.map((t) => <li><a class="tag" href={tagUrl(t)}>#{t}</a></li>)}
+        </ul>
+      </div>
+    </header>
+
+    <div class="container post-layout">
+      <div class="post-main">
+        {headings.filter((h) => h.depth <= 3).length > 1 && (
+          <details class="toc-mobile">
+            <summary>文章目录</summary>
+            <ol>
+              {headings.filter((h) => h.depth >= 2 && h.depth <= 3).map((h) => (
+                <li class={`d${h.depth}`}><a href={`#${h.slug}`}>{h.text}</a></li>
+              ))}
+            </ol>
+          </details>
+        )}
+        <div class="prose" id="article">
+          <Content />
+        </div>
+
+        <footer class="post-foot">
+          <div class="share">
+            <span>本文作者：周正 Zheng Zhou</span>
+            <span>发布于 {formatDateZh(date)}</span>
+          </div>
+          <nav class="pager" aria-label="文章导航">
+            {older ? (
+              <a class="card pager-card" href={postUrl(older)}><small>← 上一篇</small><span>{older.data.title}</span></a>
+            ) : <span />}
+            {newer ? (
+              <a class="card pager-card next" href={postUrl(newer)}><small>下一篇 →</small><span>{newer.data.title}</span></a>
+            ) : <span />}
+          </nav>
+        </footer>
+      </div>
+      <aside class="post-side">
+        <div class="side-sticky">
+          <Toc headings={headings} />
+          <a class="back" href={withBase('/blog/')}>← 返回博客</a>
+        </div>
+      </aside>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .narrow {
+    max-width: 1060px;
+  }
+  .post-hero {
+    padding-bottom: 28px;
+  }
+  .post-hero::before {
+    opacity: 0.8;
+  }
+  .crumbs {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13.5px;
+    color: var(--faint);
+  }
+  .crumbs a:hover {
+    color: #fff;
+  }
+  .post-hero h1 {
+    font-size: clamp(28px, 4.4vw, 46px);
+    max-width: 24em;
+  }
+  .post-meta {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin: 4px 0 16px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .post-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .post-hero .tag-list {
+    position: relative;
+  }
+  .post-layout {
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 56px;
+    padding-bottom: 60px;
+  }
+  .post-main {
+    min-width: 0;
+    max-width: 760px;
+    /* 正文区域使用纯色背景，保证可读性 */
+    background: rgba(5, 8, 22, 0.6);
+  }
+  .post-side {
+    min-width: 0;
+  }
+  .toc-mobile {
+    display: none;
+    margin-bottom: 28px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    font-size: 14px;
+  }
+  .toc-mobile summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    color: #fff;
+    font-weight: 600;
+  }
+  .toc-mobile ol {
+    list-style: none;
+    margin: 0;
+    padding: 0 16px 12px;
+  }
+  .toc-mobile li a {
+    display: block;
+    padding: 6px 0;
+    color: var(--muted);
+    border-top: 1px solid rgba(128, 146, 255, 0.08);
+  }
+  .toc-mobile li.d3 a {
+    padding-left: 14px;
+    font-size: 13px;
+  }
+  .side-sticky {
+    position: sticky;
+    top: calc(var(--header-h) + 24px);
+    max-height: calc(100vh - var(--header-h) - 48px);
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+  .back {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 13.5px;
+    color: var(--muted);
+  }
+  .back:hover {
+    color: #fff;
+  }
+  .post-foot {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .share {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    color: var(--faint);
+    font-size: 13.5px;
+  }
+  .pager {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .pager-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 18px;
+  }
+  .pager-card small {
+    color: var(--accent-3);
+    font-size: 12.5px;
+  }
+  .pager-card span {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .pager-card.next {
+    text-align: right;
+  }
+  @media (max-width: 960px) {
+    .post-layout {
+      grid-template-columns: 1fr;
+    }
+    .post-side {
+      display: none;
+    }
+    .toc-mobile {
+      display: block;
+    }
+  }
+  @media (max-width: 560px) {
+    .pager {
+      grid-template-columns: 1fr;
+    }
+    .pager-card.next {
+      text-align: left;
+    }
+  }
+</style>

@@ -1,0 +1,229 @@
+---
+import { CHANNEL, VIDEOS } from '../data/videos';
+import Icon from './Icon.astro';
+interface Props {
+  /** 是否额外显示「本站收录」数量 */
+  showSiteCount?: boolean;
+}
+const { showSiteCount = false } = Astro.props;
+const stats = [...CHANNEL.stats, ...(showSiteCount ? [{ label: '本站收录', value: VIDEOS.length }] : [])];
+---
+<div class="channel card reveal">
+  <div class="ch-glow" aria-hidden="true"></div>
+  <div class="ch-id">
+    <span class="ch-mark" aria-hidden="true"><Icon name="film" size={26} /></span>
+    <div>
+      <p class="ch-name">{CHANNEL.platform} · <strong>{CHANNEL.name}</strong></p>
+      <p class="ch-sub">{CHANNEL.location} · 数据截至 {CHANNEL.asOf}</p>
+    </div>
+  </div>
+  <dl class="ch-stats">
+    {stats.map((s) => (
+      <div>
+        <dt>{s.label}</dt>
+        <dd data-count={s.value}>{s.value}</dd>
+      </div>
+    ))}
+  </dl>
+  <div class="ch-cta">
+    <span>微信搜索视频号「<strong>{CHANNEL.name}</strong>」</span>
+    <button type="button" class="btn btn-primary ch-copy" data-copy={CHANNEL.name} aria-label={`复制视频号名称「${CHANNEL.name}」`}>
+      <Icon name="copy" class="ic-copy" /><Icon name="check" class="ic-done" /><span class="ch-copy-text">复制「{CHANNEL.name}」</span>
+    </button>
+    <span class="sr-only" aria-live="polite" data-copy-status></span>
+  </div>
+</div>
+
+<style>
+  .channel {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px 36px;
+    padding: clamp(20px, 3vw, 28px) clamp(20px, 3.2vw, 32px);
+  }
+  .ch-glow {
+    position: absolute;
+    inset: -60% 40% auto -10%;
+    height: 200%;
+    background: radial-gradient(ellipse at 20% 50%, rgba(124, 92, 255, 0.25), transparent 60%);
+    pointer-events: none;
+  }
+  .ch-id {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .ch-mark {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    flex: none;
+    border-radius: 16px;
+    color: #fff;
+    background: linear-gradient(135deg, #3b5bff, #8b5cf6);
+    box-shadow: 0 0 24px rgba(124, 92, 255, 0.55);
+  }
+  .ch-name {
+    margin: 0;
+    font-size: 17px;
+    color: #d3d8ef;
+    white-space: nowrap;
+  }
+  .ch-name strong {
+    color: #fff;
+  }
+  .ch-sub {
+    margin: 2px 0 0;
+    font-size: 12.5px;
+    color: var(--faint);
+  }
+  .ch-stats {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 30px;
+    margin: 0;
+  }
+  .ch-stats div {
+    border-left: 2px solid rgba(124, 140, 255, 0.35);
+    padding-left: 12px;
+  }
+  .ch-stats dt {
+    font-size: 12.5px;
+    color: var(--faint);
+    letter-spacing: 0.08em;
+  }
+  .ch-stats dd {
+    margin: 2px 0 0;
+    font-size: clamp(22px, 2.4vw, 28px);
+    font-weight: 800;
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums;
+    color: #fff;
+  }
+  .ch-cta {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .ch-cta strong {
+    color: #fff;
+  }
+  .ch-copy {
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    font-size: 14.5px;
+  }
+  .ch-copy :global(.ic-done) {
+    display: none;
+  }
+  .ch-copy.copied :global(.ic-done) {
+    display: block;
+  }
+  .ch-copy.copied :global(.ic-copy) {
+    display: none;
+  }
+  @media (max-width: 1020px) {
+    .channel {
+      grid-template-columns: 1fr;
+    }
+    .ch-cta {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  @media (max-width: 480px) {
+    .ch-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .ch-cta {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+    }
+    .ch-copy {
+      justify-content: center;
+    }
+  }
+</style>
+
+<script>
+  // 数字滚动（count-up），尊重 prefers-reduced-motion；无 JS 时直接显示最终数字
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const nums = Array.from(document.querySelectorAll<HTMLElement>('[data-count]'));
+  if (!reduce && nums.length && 'IntersectionObserver' in window) {
+    const run = (el: HTMLElement) => {
+      const target = Number(el.dataset.count) || 0;
+      const dur = 1400;
+      const t0 = performance.now();
+      const tick = (t: number) => {
+        const p = Math.min(1, (t - t0) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = String(Math.round(target * eased));
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            run(e.target as HTMLElement);
+            io.unobserve(e.target);
+          }
+        }
+      },
+      { threshold: 0.4 },
+    );
+    nums.forEach((el) => {
+      el.textContent = '0';
+      io.observe(el);
+    });
+  }
+
+  // 复制视频号名称
+  document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) => {
+    const label = btn.querySelector('.ch-copy-text');
+    const status = btn.parentElement?.querySelector('[data-copy-status]');
+    const original = label?.textContent || '';
+    btn.addEventListener('click', async () => {
+      const text = btn.dataset.copy || '';
+      let ok = false;
+      try {
+        await navigator.clipboard.writeText(text);
+        ok = true;
+      } catch {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.cssText = 'position:fixed;opacity:0';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          ok = document.execCommand('copy');
+        } catch {
+          ok = false;
+        }
+        ta.remove();
+      }
+      if (label) label.textContent = ok ? '已复制，去微信搜索' : '复制失败，请手动输入';
+      if (status) status.textContent = ok ? `已复制「${text}」` : '复制失败';
+      btn.classList.toggle('copied', ok);
+      window.setTimeout(() => {
+        if (label) label.textContent = original;
+        btn.classList.remove('copied');
+      }, 2200);
+    });
+  });
+</script>

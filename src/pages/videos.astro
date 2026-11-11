@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ChannelStats from '../components/ChannelStats.astro';
+import VideoCard from '../components/VideoCard.astro';
+import VideoPlayer from '../components/VideoPlayer.astro';
+import { CHANNEL, VIDEOS, categoryHue, posterSrc, totalDurationMinutes, videoCategories } from '../data/videos';
+const cats = videoCategories();
+---
+<BaseLayout
+  title={`视频号 · ${CHANNEL.name}`}
+  description={`周正在微信视频号「${CHANNEL.name}」发布的 AI 讲解短视频：AI Agent、Claude Code、RAG、大模型与 GitHub 热榜，共 ${VIDEOS.length} 个。`}
+  image={VIDEOS[0] ? posterSrc(VIDEOS[0]) : undefined}
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">WeChat Channels</span>
+      <h1>视频号 · <span class="grad-text">{CHANNEL.name}</span></h1>
+      <p>用几分钟讲清一个 AI 概念：Agent、Claude Code、RAG、大模型与每日 GitHub 热榜。本站收录 {VIDEOS.length} 个竖版短视频，合计约 {totalDurationMinutes()} 分钟，点击卡片即可播放。</p>
+    </div>
+  </section>
+
+  <section class="container videos-wrap">
+    <ChannelStats showSiteCount />
+
+    <div class="filter" role="group" aria-label="按分类筛选视频">
+      <button type="button" class="tag is-active" data-cat="" aria-pressed="true">全部 <b>{VIDEOS.length}</b></button>
+      {cats.map((c) => (
+        <button type="button" class="tag" data-cat={c.category} aria-pressed="false" style={`--hue:${categoryHue(c.category)}`}>
+          <i aria-hidden="true"></i>{c.category} <b>{c.count}</b>
+        </button>
+      ))}
+    </div>
+    <p class="result" id="v-result" aria-live="polite"></p>
+
+    <div class="video-grid" id="video-grid">
+      {VIDEOS.map((v, i) => <VideoCard video={v} delay={0.05 * (i % 4)} />)}
+    </div>
+  </section>
+  <VideoPlayer />
+</BaseLayout>
+
+<style>
+  .videos-wrap {
+    padding-bottom: 88px;
+  }
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: clamp(28px, 4vw, 40px) 0 12px;
+  }
+  .filter button {
+    cursor: pointer;
+    font: inherit;
+    font-size: 13.5px;
+    padding: 5px 13px;
+  }
+  .filter i {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 3px;
+    border-radius: 50%;
+    background: hsl(var(--hue), 85%, 65%);
+    box-shadow: 0 0 8px hsla(var(--hue), 90%, 65%, 0.8);
+  }
+  .filter b {
+    font-weight: 600;
+    color: var(--faint);
+    margin-left: 2px;
+  }
+  .filter .is-active b {
+    color: #dfe4ff;
+  }
+  .result {
+    min-height: 1.6em;
+    margin: 0 0 16px;
+    color: var(--faint);
+    font-size: 14px;
+  }
+  .result :global(button) {
+    background: none;
+    border: 0;
+    color: var(--accent-3);
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+  }
+</style>
+
+<script>
+  const btns = Array.from(document.querySelectorAll<HTMLButtonElement>('.filter [data-cat]'));
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('#video-grid .video-card'));
+  const result = document.getElementById('v-result')!;
+  const apply = (cat: string, push = true) => {
+    let n = 0;
+    for (const c of cards) {
+      const show = !cat || c.dataset.category === cat;
+      c.hidden = !show;
+      if (show) {
+        n++;
+        c.classList.add('is-visible');
+      }
+    }
+    for (const b of btns) {
+      const on = (b.dataset.cat || '') === cat;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', String(on));
+    }
+    result.textContent = '';
+    if (cat) {
+      const strong = document.createElement('strong');
+      strong.textContent = cat;
+      const clear = document.createElement('button');
+      clear.type = 'button';
+      clear.textContent = '清除筛选';
+      clear.addEventListener('click', () => apply(''));
+      result.append('分类 ', strong, ` 下共 ${n} 个视频 · `, clear);
+    }
+    if (push) {
+      const url = new URL(location.href);
+      cat ? url.searchParams.set('cat', cat) : url.searchParams.delete('cat');
+      history.replaceState(null, '', url);
+    }
+  };
+  btns.forEach((b) => b.addEventListener('click', () => apply(b.dataset.cat || '')));
+  const initial = new URLSearchParams(location.search).get('cat');
+  if (initial && btns.some((b) => b.dataset.cat === initial)) apply(initial, false);
+</script>

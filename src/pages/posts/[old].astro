@@ -1,0 +1,32 @@
+---
+/**
+ * 旧 Jekyll（Chirpy）文章地址 /posts/<文件名>/ → 新地址 /blog/<slug>/ 的静态跳转页
+ */
+import { getPosts, postUrl, type Post } from '../../utils';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts
+    .filter((p) => p.data.sourceFile)
+    .map((post) => ({
+      params: { old: post.data.sourceFile!.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '') },
+      props: { post },
+    }));
+}
+const { post } = Astro.props as { post: Post };
+const target = postUrl(post);
+const abs = new URL(target, Astro.site).href;
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>{post.data.title} — 已迁移</title>
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={abs} />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+  </head>
+  <body style="background:#050816;color:#e7eaf6;font-family:system-ui,sans-serif;padding:40px">
+    <p>文章已迁移到新地址：<a style="color:#9db4ff" href={target}>{post.data.title}</a></p>
+  </body>
+</html>

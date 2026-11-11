@@ -1,0 +1,275 @@
+---
+import Icon from './Icon.astro';
+---
+<dialog class="vp" id="video-dialog" aria-labelledby="vp-title">
+  <div class="vp-inner">
+    <div class="vp-stage">
+      <video id="vp-video" controls playsinline preload="none" width="540" height="960"></video>
+    </div>
+    <div class="vp-info">
+      <span class="vp-badge" id="vp-cat"></span>
+      <h2 id="vp-title"></h2>
+      <p class="vp-meta"><time id="vp-date"></time> · <span id="vp-dur"></span></p>
+      <p class="vp-desc" id="vp-desc"></p>
+      <div class="vp-nav">
+        <button type="button" class="vp-btn" id="vp-prev" aria-label="上一个视频"><Icon name="prev" /></button>
+        <span class="vp-count" id="vp-count" aria-live="polite"></span>
+        <button type="button" class="vp-btn" id="vp-next" aria-label="下一个视频"><Icon name="next" /></button>
+      </div>
+      <p class="vp-hint">Esc 关闭 · ← → 切换</p>
+    </div>
+  </div>
+  <button type="button" class="vp-btn vp-close" id="vp-close" aria-label="关闭播放器" autofocus><Icon name="close" /></button>
+</dialog>
+
+<style>
+  .vp {
+    width: min(960px, calc(100vw - 32px));
+    max-width: none;
+    max-height: calc(100dvh - 32px);
+    padding: 0;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    color: var(--text);
+    background: linear-gradient(180deg, rgba(22, 32, 72, 0.96), rgba(10, 15, 38, 0.98));
+    box-shadow: 0 30px 120px -20px rgba(90, 100, 255, 0.55);
+    overflow: auto;
+  }
+  .vp[open] {
+    animation: vp-in 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .vp::backdrop {
+    background: rgba(3, 5, 16, 0.78);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  @keyframes vp-in {
+    from {
+      opacity: 0;
+      transform: translateY(18px) scale(0.97);
+    }
+  }
+  .vp-inner {
+    display: flex;
+    gap: 28px;
+    padding: 22px;
+    align-items: stretch;
+  }
+  .vp-stage {
+    flex: none;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: #000;
+    overflow: hidden;
+  }
+  .vp-stage video {
+    display: block;
+    height: min(78dvh, 760px);
+    width: auto;
+    aspect-ratio: 9 / 16;
+    max-width: 100%;
+    background: #000;
+    object-fit: contain;
+  }
+  .vp-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 34px 6px 4px 0;
+  }
+  .vp-badge {
+    align-self: flex-start;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    color: #fff;
+    background: hsla(var(--hue, 230), 85%, 55%, 0.45);
+    border: 1px solid hsla(var(--hue, 230), 90%, 80%, 0.35);
+  }
+  .vp-info h2 {
+    margin: 0;
+    font-size: clamp(20px, 2.4vw, 26px);
+    line-height: 1.35;
+    color: #fff;
+  }
+  .vp-meta {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--faint);
+  }
+  .vp-desc {
+    margin: 4px 0 0;
+    color: #d3d8ef;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .vp-nav {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: auto;
+    padding-top: 18px;
+  }
+  .vp-count {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--muted);
+    min-width: 60px;
+    text-align: center;
+  }
+  .vp-btn {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid var(--border-strong);
+    background: rgba(255, 255, 255, 0.04);
+    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, opacity 0.2s;
+  }
+  .vp-btn:hover {
+    border-color: var(--accent);
+    background: rgba(124, 140, 255, 0.18);
+    box-shadow: var(--glow);
+  }
+  .vp-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+    box-shadow: none;
+  }
+  .vp-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+    background: rgba(5, 8, 22, 0.6);
+  }
+  .vp-hint {
+    margin: 0;
+    font-size: 12px;
+    color: var(--faint);
+  }
+  :global(html.vp-lock) {
+    overflow: hidden;
+  }
+  @media (max-width: 760px) {
+    .vp {
+      width: calc(100vw - 20px);
+      max-height: calc(100dvh - 20px);
+    }
+    .vp-inner {
+      flex-direction: column;
+      gap: 14px;
+      padding: 12px;
+    }
+    .vp-stage video {
+      height: auto;
+      width: 100%;
+      max-height: 64dvh;
+    }
+    .vp-info {
+      padding: 0 4px 4px;
+    }
+    .vp-desc {
+      font-size: 14px;
+    }
+    .vp-nav {
+      padding-top: 6px;
+      justify-content: center;
+    }
+    .vp-hint {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const dlg = document.getElementById('video-dialog') as HTMLDialogElement | null;
+  if (dlg) {
+    const video = document.getElementById('vp-video') as HTMLVideoElement;
+    const $ = (id: string) => document.getElementById(id)!;
+    const prevBtn = $('vp-prev') as HTMLButtonElement;
+    const nextBtn = $('vp-next') as HTMLButtonElement;
+    let list: HTMLButtonElement[] = [];
+    let idx = 0;
+    let opener: HTMLElement | null = null;
+
+    // 当前可见（未被筛选隐藏）的视频卡片，按页面顺序
+    const visible = () =>
+      Array.from(document.querySelectorAll<HTMLButtonElement>('[data-video-open]')).filter(
+        (b) => !b.closest('[hidden]'),
+      );
+
+    const show = (i: number, autoplay = true) => {
+      const b = list[i];
+      if (!b) return;
+      idx = i;
+      const d = b.dataset;
+      video.pause();
+      video.poster = d.poster || '';
+      video.src = d.src || '';
+      $('vp-title').textContent = d.title || '';
+      $('vp-date').textContent = d.date || '';
+      $('vp-date').setAttribute('datetime', d.date || '');
+      $('vp-dur').textContent = d.duration || '';
+      $('vp-desc').textContent = d.desc || '';
+      const cat = $('vp-cat');
+      cat.textContent = d.category || '';
+      const hue = (b.closest('.video-card') as HTMLElement | null)?.style.getPropertyValue('--hue');
+      if (hue) dlg.style.setProperty('--hue', hue);
+      $('vp-count').textContent = `${i + 1} / ${list.length}`;
+      prevBtn.disabled = i <= 0;
+      nextBtn.disabled = i >= list.length - 1;
+      if (autoplay) video.play().catch(() => {});
+    };
+
+    const open = (b: HTMLButtonElement) => {
+      list = visible();
+      opener = b;
+      document.documentElement.classList.add('vp-lock');
+      if (!dlg.open) dlg.showModal();
+      show(Math.max(0, list.indexOf(b)));
+    };
+
+    const close = () => {
+      if (dlg.open) dlg.close();
+    };
+
+    dlg.addEventListener('close', () => {
+      video.pause();
+      video.removeAttribute('src');
+      video.removeAttribute('poster');
+      video.load(); // 停止继续下载
+      document.documentElement.classList.remove('vp-lock');
+      opener?.focus({ preventScroll: true });
+    });
+
+    document.addEventListener('click', (e) => {
+      const b = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-video-open]');
+      if (b) open(b);
+    });
+    // 点击遮罩（dialog 自身而非内容）关闭
+    dlg.addEventListener('click', (e) => {
+      if (e.target === dlg) close();
+    });
+    $('vp-close').addEventListener('click', close);
+    prevBtn.addEventListener('click', () => show(idx - 1));
+    nextBtn.addEventListener('click', () => show(idx + 1));
+    dlg.addEventListener('keydown', (e) => {
+      if (e.target instanceof HTMLVideoElement) return; // 视频获得焦点时保留原生快进/快退
+      if (e.key === 'ArrowLeft' && idx > 0) {
+        e.preventDefault();
+        show(idx - 1);
+      } else if (e.key === 'ArrowRight' && idx < list.length - 1) {
+        e.preventDefault();
+        show(idx + 1);
+      }
+    });
+  }
+</script>

@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { allTags, getPosts, tagUrl } from '../../utils';
+const posts = await getPosts();
+const tags = allTags(posts);
+const max = Math.max(...tags.map((t) => t.count));
+---
+<BaseLayout title="标签" description="按标签浏览周正的全部文章。">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Tags</span>
+      <h1>标签 <span class="grad-text">Tags</span></h1>
+      <p>{tags.length} 个标签，覆盖 {posts.length} 篇文章。</p>
+    </div>
+  </section>
+  <section class="container cloud-wrap">
+    <ul class="cloud">
+      {tags.map((t, i) => (
+        <li class="reveal" style={`--d:${Math.min(i * 0.015, 0.6)}s`}>
+          <a href={tagUrl(t.tag)} class="cloud-tag" style={`--w:${0.85 + (t.count / max) * 0.9}`}>
+            #{t.tag}<sup>{t.count}</sup>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
+<style>
+  .cloud-wrap {
+    padding-bottom: 100px;
+  }
+  .cloud {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .cloud-tag {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: calc(14px * var(--w));
+    color: #dfe4ff;
+    background: rgba(124, 140, 255, 0.08);
+    border: 1px solid var(--border);
+    transition: transform 0.2s, background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  }
+  .cloud-tag:hover {
+    transform: translateY(-3px);
+    background: rgba(124, 140, 255, 0.2);
+    border-color: var(--accent);
+    box-shadow: var(--glow);
+  }
+  sup {
+    font-size: 11px;
+    color: var(--accent-3);
+  }
+</style>

@@ -1,0 +1,77 @@
+---
+import type { MarkdownHeading } from 'astro';
+interface Props {
+  headings: MarkdownHeading[];
+}
+const items = Astro.props.headings.filter((h) => h.depth >= 2 && h.depth <= 3);
+---
+{items.length > 1 && (
+  <nav class="toc" aria-label="文章目录">
+    <p class="toc-title">目录</p>
+    <ol>
+      {items.map((h) => (
+        <li class={`d${h.depth}`}><a href={`#${h.slug}`} data-toc={h.slug}>{h.text}</a></li>
+      ))}
+    </ol>
+  </nav>
+)}
+
+<style>
+  .toc {
+    font-size: 13.5px;
+  }
+  .toc-title {
+    margin: 0 0 10px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-3);
+  }
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid var(--border);
+  }
+  li a {
+    display: block;
+    padding: 5px 0 5px 14px;
+    margin-left: -1px;
+    border-left: 2px solid transparent;
+    color: var(--faint);
+    line-height: 1.5;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  li.d3 a {
+    padding-left: 26px;
+    font-size: 13px;
+  }
+  li a:hover {
+    color: #fff;
+  }
+  li a.active {
+    color: #fff;
+    border-left-color: var(--accent);
+  }
+</style>
+
+<script>
+  const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('[data-toc]'));
+  if (links.length) {
+    const map = new Map(links.map((l) => [l.dataset.toc!, l]));
+    const heads = links.map((l) => document.getElementById(l.dataset.toc!)).filter(Boolean) as HTMLElement[];
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            links.forEach((l) => l.classList.remove('active'));
+            map.get(e.target.id)?.classList.add('active');
+          }
+        }
+      },
+      { rootMargin: '-80px 0px -70% 0px' },
+    );
+    heads.forEach((h) => io.observe(h));
+  }
+</script>

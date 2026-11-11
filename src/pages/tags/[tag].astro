@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { allTags, getPosts, withBase, type Post } from '../../utils';
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return allTags(posts).map(({ tag }) => ({
+    params: { tag },
+    props: { tag, posts: posts.filter((p) => p.data.tags.includes(tag)) },
+  }));
+}
+interface Props {
+  tag: string;
+  posts: Post[];
+}
+const { tag, posts } = Astro.props;
+---
+<BaseLayout title={`#${tag}`} description={`标签「${tag}」下的 ${posts.length} 篇文章。`}>
+  <section class="page-hero">
+    <div class="container">
+      <a class="eyebrow" href={withBase('/tags/')}>Tags</a>
+      <h1>#<span class="grad-text">{tag}</span></h1>
+      <p>共 {posts.length} 篇文章 · <a href={withBase('/tags/')} style="color:var(--accent-3)">查看全部标签</a></p>
+    </div>
+  </section>
+  <section class="container" style="padding-bottom:80px">
+    <div class="grid grid-3">
+      {posts.map((p, i) => <PostCard post={p} delay={0.05 * (i % 3)} eager={i < 3} />)}
+    </div>
+  </section>
+</BaseLayout>
