@@ -38,11 +38,19 @@ import { SITE, SKILLS } from '../consts';
         <li><Icon name="x" /> X / Twitter：<a href={SITE.x} target="_blank" rel="noopener">{SITE.xHandle}</a></li>
         <li><Icon name="play" /> 抖音：<a href="https://www.douyin.com/search/ZhouZheng_YeDan?type=user" target="_blank" rel="noopener">ZhouZheng_YeDan</a></li>
       </ul>
+      <figure class="qr-card">
+        <img src="/images/douyin-qr.webp" width="480" height="652" loading="lazy" alt="抖音二维码：周正，正直，抖音号 ZhouZheng_YeDan" />
+        <figcaption>抖音扫一扫，关注我</figcaption>
+      </figure>
       <p class="sig">Zheng Zhou</p>
     </div>
   </section>
 </BaseLayout>
 <style>
+  .qr-card { margin: 1.5rem 0 0; width: min(220px, 60vw); }
+  .qr-card img { display: block; width: 100%; height: auto; border-radius: 16px; box-shadow: 0 8px 30px rgba(99, 102, 241, 0.25); }
+  .qr-card figcaption { margin-top: .5rem; font-size: .85rem; opacity: .7; text-align: center; }
+
   .about-hero {
     display: flex;
     align-items: center;
