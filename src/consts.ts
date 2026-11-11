@@ -9,7 +9,6 @@ export const SITE = {
   github: 'https://github.com/zhouzhengjeff',
   x: 'https://x.com/JeffChouCheng',
   xHandle: '@JeffChouCheng',
-  podcast: 'https://www.youtube.com/@BeyondCodeFM',
 };
 
 export const ROLES = ['程序员', 'Java & Python & AI Agent 讲师', '创作者'];
