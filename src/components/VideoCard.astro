@@ -1,0 +1,211 @@
+---
+import { categoryHue, formatDuration, posterSrc, videoSrc, type Video } from '../data/videos';
+import Icon from './Icon.astro';
+interface Props {
+  video: Video;
+  delay?: number;
+}
+const { video, delay = 0 } = Astro.props;
+const dur = formatDuration(video.duration_sec);
+---
+<article
+  class="card video-card reveal"
+  data-tilt
+  data-category={video.category}
+  style={`--d:${delay}s; --hue:${categoryHue(video.category)}`}
+>
+  <button
+    type="button"
+    class="vc-open"
+    data-video-open
+    data-src={videoSrc(video)}
+    data-poster={posterSrc(video)}
+    data-title={video.title}
+    data-date={video.date}
+    data-duration={dur}
+    data-category={video.category}
+    data-desc={video.description}
+    aria-label={`播放视频：${video.title}（时长 ${dur}）`}
+  ></button>
+  <div class="vc-poster">
+    <img src={posterSrc(video)} alt="" width={video.width} height={video.height} loading="lazy" decoding="async" />
+    <span class="vc-badge">{video.category}</span>
+    <span class="vc-play" aria-hidden="true"><Icon name="play" size={22} /></span>
+    <span class="vc-dur"><span class="sr-only">时长 </span>{dur}</span>
+  </div>
+  <div class="vc-body">
+    <time datetime={video.date}>{video.date}</time>
+    <h3>{video.title}</h3>
+    <p>{video.description}</p>
+  </div>
+</article>
+
+<style>
+  .video-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .video-card[hidden] {
+    display: none;
+  }
+  .vc-open {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: inherit;
+    background: transparent;
+    cursor: pointer;
+  }
+  .vc-open:focus-visible {
+    outline: 2px solid var(--accent-3);
+    outline-offset: -2px;
+  }
+  .vc-poster {
+    position: relative;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(124, 92, 255, 0.35), transparent 55%),
+      linear-gradient(135deg, #0f1a45, #1a1450);
+  }
+  .vc-poster img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.92) brightness(0.9);
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.4s;
+  }
+  .video-card:hover .vc-poster img {
+    transform: scale(1.05);
+    filter: saturate(1.05) brightness(1);
+  }
+  .vc-poster::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(8, 12, 32, 0.35), transparent 22%, transparent 62%, rgba(8, 12, 32, 0.85));
+    pointer-events: none;
+  }
+  .vc-badge {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    max-width: calc(100% - 20px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 2px 9px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    line-height: 1.7;
+    color: #fff;
+    background: hsla(var(--hue), 85%, 55%, 0.5);
+    border: 1px solid hsla(var(--hue), 90%, 80%, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .vc-play {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    padding-left: 3px;
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(90, 80, 255, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 30px rgba(124, 92, 255, 0.6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.85;
+    transition: transform 0.3s, opacity 0.3s, background 0.3s;
+  }
+  .video-card:hover .vc-play,
+  .vc-open:focus-visible ~ .vc-poster .vc-play {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    background: linear-gradient(120deg, #4f6bff, #8b5cf6);
+  }
+  .vc-dur {
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    bottom: 10px;
+    padding: 1px 7px;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: #fff;
+    background: rgba(5, 8, 22, 0.72);
+  }
+  .vc-body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 16px 16px;
+    flex: 1;
+  }
+  .vc-body time {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--faint);
+  }
+  .vc-body h3 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.45;
+    font-weight: 700;
+    color: #fff;
+    transition: color 0.2s;
+  }
+  .video-card:hover h3 {
+    color: #c7d2ff;
+  }
+  .vc-body p {
+    margin: 0;
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  @media (max-width: 560px) {
+    .vc-body {
+      padding: 10px 11px 12px;
+      gap: 4px;
+    }
+    .vc-body h3 {
+      font-size: 14px;
+    }
+    .vc-body p {
+      font-size: 12.5px;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+    }
+    .vc-badge {
+      top: 7px;
+      left: 7px;
+      font-size: 10.5px;
+      padding: 1px 7px;
+    }
+    .vc-play {
+      width: 44px;
+      height: 44px;
+    }
+  }
+</style>

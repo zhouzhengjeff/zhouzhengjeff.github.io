@@ -1,0 +1,571 @@
+---
+title: "2023年总结-随心而活"
+date: 2024-11-05
+description: "我一直都会有一个小纠结：那就是每篇文章要如何开始？我认为写一篇好的 Blog 最难就是开始。因为没有一个好的引子或序言，根本吸引不了读者。"
+series: annual
+tags:
+  - "个人日常"
+  - "2023年总结"
+  - "随心而活"
+  - "我的年终总结"
+cover: "./images/2023-summary/img-01-047395.webp"
+sourceFile: "2024-11-05-2023-Sumarry.md"
+---
+
+## 聊聊开篇
+
+我一直都会有一个小纠结：那就是每篇文章要如何开始？我认为写一篇好的 Blog 最难就是开始。因为没有一个好的引子或序言，根本吸引不了读者。
+
+其实从我开始写日记那会就一直存在这个Question。每次都会想很久，拼命的想。要是没有灵感那就是一篇流水帐，平淡无奇，死水一潭；要是今天有一点感觉，有一点灵感，那可能写出来的文字还能将就读读。不过在我父亲的眼里，我的文章是出奇的平庸。不过现在想想事实也是如此，因为从小文学修养实在欠缺，这源于小时候没有养成读书的习惯。现在一想到此甚是后悔，实在可惜。但是一切注定如此，世上没有后悔，没有重来，那只能当下再多读读书，多写写字。
+
+说到这个开篇二字，我还清晰地记得父亲曾经耳提面命地叮嘱过我一件很重要的事情。这件事情对我的影响还蛮大。什么事情呢？听我慢慢道来：我一直语文成绩不好，源于上面所说，阅读量太小。但是我记得我高考的语文作文应该是我人生中少有的一次亮点。怎么说？是这样：父亲是我的语文老师（班主任），所以他有时会卸下父亲这个角色，把自己当成很严厉的师者来面对我，这样他会经常语重心长地对我说：“每篇文章的
+Beginning 是灵魂，是主题，是基调，你要定下论点，设置悬念，所以你的 Beginning 和 Ending
+要是写好了，那这次你的作文一定不会低分。”这句话我一直记忆犹新，牢记心头。当然我本也是一个言听计从的学生，老师说的每句话在我看来就是真理，就是唯一选项。因此他的这番话触及到我内心深处，引发我强烈的情感反应和思考，让我感触很深，产生了深远的影响。于是在我高考前夕我拼命地背诵了一些好文的开始和结尾，后来居然在我的高考作文里都用上去了，结果我的语文高考作文应该是高分。也就这件事成为了我人生中引以自傲的一件事。其实当时的我很有成就感，还蛮开心的。而且我觉得我给父亲争了一口气。现在想起来确实做到了，打破了魔咒，一个高中三年语文不及格的魔咒。我想，父亲应该也是为我高兴的。
+
+## Who am I
+
+> 你好，我是周正。英文名是 Jeff Chou。
+
+> 我是一名程序员，一名Java讲师，也是一个创作者。但我更觉得我就是一个 Java 布道者。我还有一个名字叫爪哇爹。你们可以叫我正哥。
+
+> 我享受写代码，尤其享受重构代码。
+
+> 我喜欢一点点的剔除坏掉的，晦涩的片段，最终变成容易读懂，容易修改的代码。
+
+> 我喜欢一边看源码，一边画图的过程。
+
+> 我也喜欢折腾一些新玩意然后将它们分享给我的听众。
+
+> 我喜欢将这种化繁为简的技术教给别人的感觉。
+
+> 我非常享受分享技术的工作。
+
+> 我喜欢扎扎实实地做好教学，以工匠精神投入课研。不管是育人还是课研，都离不开**执着（Perseverance）**、*
+> *专注（Focus）**和**坚持（Persist）。**
+
+> 我喜欢不断突破和与时俱进地创新，这便是工匠精神的内涵所在。
+
+> 2017年之后，我尝试地去带着我的孩子到处去游玩，我喜欢大自然给我带来的美好，我喜欢儿子的陪伴，我喜欢无拘无束地在世界的各个角落行走。
+
+> 这就是我，这就是最真实的我。
+
+![这就是我](./images/2023-summary/img-01-047395.webp)
+
+## 聊啥
+
+疫情 3 年终于结束，有几年都没有写工作总结了，今天是 2024 年的 11 月 5
+日，对于拖延症患者而言再不写可能就被我拖没了，那可不行，等到老了以后再来回忆应该都记不住发生了啥。对于我而言
+2023 年是值得记录的一年，经历了不少有趣的事情，也慢慢活明白了点儿，标题就叫《随心而活》好了，打算从生活、折腾、展望三方面来随便聊聊。
+
+## 生活
+
+首先我要感谢这一年的自己，对自己说一声辛苦了。虽然这一年过得十分艰难，很多事情都发展不顺利，但是还是要对自己说一声辛苦了，最起码坚持到了最后，成功又度过了一年。
+
+这一年的周末时间除了敲代码外，有些时间用来尽情的生活，今年也慢慢没有那种“在意他人眼光看法”的想法了，率性而活，想做啥就去做，想吃啥就去吃，想说啥就去说，很轻松的心态，因为不想过得太遗憾和太重复。
+
+### 一年十二个月-January
+
+- 放假在家，准备过年，这次在长沙过年。
+- 带儿子登山望远，许下心愿。
+- 教儿子踢足球，他终于会停球了，会踢电梯球了。
+- 长沙下了2023年的第一场大雪。
+- 感受2023年的第一缕阳光
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E7%99%BB%E5%B1%B1%E6%9C%9B%E8%BF%9C1.mp4"></video><figcaption>登山望远</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E7%99%BB%E5%B1%B1%E6%9C%9B%E8%BF%9C2.mp4"></video><figcaption>登山望远</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/2023%E5%B9%B4%E7%9A%84%E7%AC%AC%E4%B8%80%E5%9C%BA%E5%A4%A7%E9%9B%AA.mp4"></video><figcaption>2023年的第一场大雪</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E6%84%9F%E5%8F%972023%E5%B9%B4%E7%9A%84%E7%AC%AC%E4%B8%80%E7%BC%95%E9%98%B3%E5%85%89.mp4"></video><figcaption>感受2023年的第一缕阳光</figcaption></figure>
+
+### 一年十二个月-February
+
+- 2月花了两天看完Netflix的新剧《黑暗荣耀》
+- 开启2023年的第一次骑行，跟儿子一起在雨中前行
+- 人生中过得最浪漫的情人节，以最简单的方式：三杯茶，三个人，一辈子
+- 熬夜观看了皇马 vs 利物浦的比赛，皇马赢得比赛。
+- 去往刘少奇故居，等车确实很辛苦
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E6%9C%80%E6%B5%AA%E6%BC%AB%E7%9A%84%E6%83%85%E4%BA%BA%E8%8A%82.mp4"></video><figcaption>最浪漫的情人节</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E7%AD%89%E8%BD%A6%E7%A1%AE%E5%AE%9E%E5%BE%88%E8%BE%9B%E8%8B%A6.mp4"></video><figcaption>等车确实很辛苦</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E5%88%98%E5%B0%91%E5%A5%87%E6%95%85%E5%B1%85.mp4"></video><figcaption>刘少奇故居</figcaption></figure>
+
+![皇马对利物浦](./images/2023-summary/img-02-45f657.jpg)
+
+![黑暗荣耀](./images/2023-summary/img-03-283016.jpg)
+
+### 一年十二个月-March
+
+- 3月全家人一起登岳麓山
+- 来到大学城，吃起了我最爱的牛肉饼。相当的不错。
+- 3.8妇女节必须要有仪式感。送了老婆一盒她最爱的巧克力。
+- 黑暗荣耀归来，第二部来袭
+- 带儿子来到了动趣王国
+- 带儿子来打拳皇，感觉他可以打遍天下无敌手。
+- 儿子发了一次高烧，很受罪，恨不得把这种罪转接到我身上。
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E5%85%A8%E5%AE%B6%E4%BA%BA%E4%B8%80%E8%B5%B7%E7%99%BB%E5%B2%B3%E9%BA%93%E5%B1%B1.mp4"></video><figcaption>全家人一起登岳麓山</figcaption></figure>
+
+![3.8妇女节](./images/2023-summary/img-04-f7e770.jpg)
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E6%8B%B3%E7%9A%87.mp4"></video><figcaption>拳皇</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E7%89%9B%E8%82%89%E9%A5%BC.mp4"></video><figcaption>牛肉饼</figcaption></figure>
+
+### 一年十二个月-April
+
+- 4月喝到了传说中的十分满糖水。真的有很多人排队啊！
+- 今年第一次送儿子上学，叮嘱他好好学习，天天向上。我觉得儿子是一个很听话的孩子
+- 感受小学的升旗仪式。哇，震撼到我，勾起了我的回忆。
+- 一个人开始登山，没有儿子的陪伴，似乎感觉缺少点什么。但有一种只愿生在此山中的感觉。没有纷争，没有暴力，没有恐怖，没有歧视，一切都是自由平等，和谐美好。
+- 国家德比中皇马大胜。见证了皇马的强大。
+- 收到学员送给我的一大杯水果茶。
+- 带儿子体验乡村生活，泉水冲我们来了，看到了 Big Green Tractor
+- 吃到了中国汉堡。它的出现可以让我减少去 KFC 或 McDonald 的次数
+- 开启最远的一次长沙西行。宁乡楼台山我们来了。
+- 开启最远的一次长沙东行。印山湖我们来了。
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E5%8D%81%E5%88%86%E6%BB%A1%E7%B3%96%E6%B0%B4.mp4"></video><figcaption>十分满糖水</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E9%80%81%E5%84%BF%E5%AD%90%E4%B8%8A%E5%AD%A6.mp4"></video><figcaption>送儿子上学</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E5%A5%BD%E5%A5%BD%E5%AD%A6%E4%B9%A0.mp4"></video><figcaption>好好学习</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E5%8D%87%E6%97%97%E4%BB%AA%E5%BC%8F.mp4"></video><figcaption>升旗仪式</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%99%BB%E5%B1%B1.mp4"></video><figcaption>一个人登山</figcaption></figure>
+
+![国家德比](./images/2023-summary/img-05-483dc7.jpg)
+
+![学员送给我的一大杯水果茶](./images/2023-summary/img-06-f1060c.jpg)
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/BigGreenTractor.mp4"></video><figcaption>Big Green Tractor</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E4%B8%AD%E5%9B%BD%E6%B1%89%E5%A0%A1.mp4"></video><figcaption>中国汉堡</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E5%8D%B0%E5%B1%B1%E6%B9%96.mp4"></video><figcaption>印山湖</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E5%8D%B0%E5%B1%B1%E6%B9%96%E6%B9%96%E6%B0%B4.mp4"></video><figcaption>印山湖湖水</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/4-10_-_Compressed_with_FlexClip.mp4"></video><figcaption>宁乡楼台山</figcaption></figure>
+
+### 一年十二个月-May
+
+- 5月我们一家人回老家，沿途看到了西洞庭，很大很美。
+- 给儿子过生日，那可不能马虎。给他唱生日快乐歌，他还嫌吵。有脾气，谁叫他是我儿子。
+- 传说中的笨罗卜网红店我们来打卡了。
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E8%A5%BF%E6%B4%9E%E5%BA%AD.mp4"></video><figcaption>西洞庭</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/5-5_-_Compressed_with_FlexClip.mp4"></video><figcaption>笨罗卜网红店</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/5-2_-_Compressed_with_FlexClip.mp4"></video><figcaption>回老家</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/5-3_-_Compressed_with_FlexClip.mp4"></video><figcaption>准备儿子的生日礼物</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E7%BB%99%E5%84%BF%E5%AD%90%E8%BF%87%E7%94%9F%E6%97%A5.mp4"></video><figcaption>给儿子过生日</figcaption></figure>
+
+### 一年十二个月-June
+
+- 公司团建活动-衡山祈福
+- 今年给儿子买的第一个玩具-四子棋。
+- 爸，我热了。这句话可经典了！已经汗流浃背。
+- 今年和女儿看的第一场电影-消失的她
+- 陪女儿买她喜欢的东西，突然发现女儿长大了很多！
+- 端午节去外婆家吃好吃的
+- 欧冠决赛的那一脚
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/6-1_-_Compressed_with_FlexClip.mp4"></video><figcaption>衡山祈福</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/6-2_-_Compressed_with_FlexClip.mp4"></video><figcaption>衡山祈福</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/6-3_-_Compressed_with_FlexClip.mp4"></video><figcaption>四子棋</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/6-4_-_Compressed_with_FlexClip.mp4"></video><figcaption>爸，我热了</figcaption></figure>
+
+![消失的她](./images/2023-summary/img-07-83ecd2.jpg)
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E9%99%AA%E5%A5%B3%E5%84%BF%E5%90%83%E9%A5%AD.mp4"></video><figcaption>陪女儿吃饭</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E9%99%AA%E5%A5%B3%E5%84%BF%E4%B9%B0%E5%A5%B9%E5%96%9C%E6%AC%A2%E7%9A%84%E4%B8%9C%E8%A5%BF.mp4"></video><figcaption>陪女儿买她喜欢的东西</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E6%AC%A7%E5%86%A0%E5%86%B3%E8%B5%9B%E7%9A%84%E9%82%A3%E4%B8%80%E8%84%9A.mp4"></video><figcaption>欧冠决赛的那一脚</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/6-8_-_Compressed_with_FlexClip.mp4"></video><figcaption>端午节去外婆家吃好吃的</figcaption></figure>
+
+### 一年十二个月-July
+
+- 今年第二季度部门聚餐活动
+- 2105JA毕业项目答辩
+- 2110JA升学项目答辩
+- 今年在梅溪湖看的第一场喷泉
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/7-1_-_Compressed_with_FlexClip.mp4"></video><figcaption>第二季度部门聚餐活动</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/7-2_-_Compressed_with_FlexClip_%281%29.mp4"></video><figcaption>2105JA毕业项目答辩</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/7-3_-_Compressed_with_FlexClip.mp4"></video><figcaption>2110JA升学项目答辩</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/7-4_-_Compressed_with_FlexClip.mp4"></video><figcaption>梅溪湖看的第一场喷泉</figcaption></figure>
+
+### 一年十二个月-August
+
+- 第一次发现儿子很有爱心
+- 第一次发现儿子有产品经理的潜质
+- 今年给儿子买的第二个玩具-智能军棋
+- 今年下得最大的一场雨
+- 2107JA毕业照
+- 2107JA毕业项目答辩
+- 女儿独立生活能力很强，自己挑选衣服。
+- 给女儿买她喜欢吃的东西，她很小心地选着，觉得贵。真懂事的丫头！我希望她的生活就如果大白兔奶糖一样那么甜。
+- 哦，没想到你今天想吃火锅。这个火锅不错啊，还有很好的祝福。鸿运当头，红红火火！
+- 女儿很喜欢看书，已经把四大名著看得差不多了！跟我是侃侃而谈啊！给你点赞！
+- 女儿已经读初一。加油，未来可期！老爸为你感到骄傲！
+- 今年听到的最感人的一首乡村音乐-让我想起我的爷爷和爸爸。一开口我就鸡皮疙瘩起来了！我最喜爱的乡村歌手。这首歌陪伴了我很多年！心情低落的时候我就会听一听！不知道为什么今天听第一遍的时候就特别思念我的父亲和我的爷爷！我真的发现思念是一种病，思念有时会让人心痛！就是这种思念的痛让我流下了眼泪！
+- 2107JA毕业聚餐
+- 天下没有不散之宴席！那我们短暂的相聚也快到了尽头！但离别不会是永远！我们定会相聚在下一个路口！我会等你们归来，带着笑脸，带着荣耀，带着光辉！那时的我定会为你们感到骄傲！那时的你们定会是自己心目中的英雄！祝你们好运，祝你们幸福！再见我的同学们，再见2023年9月1日！
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/8-1_-_Compressed_with_FlexClip_%282%29.mp4"></video><figcaption>第一次发现儿子很有爱心</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/8-2_-_Compressed_with_FlexClip.mp4"></video><figcaption>第一次发现儿子有产品经理的潜质</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/8-3_-_Compressed_with_FlexClip.mp4"></video><figcaption>智能军棋</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/8-4_-_Compressed_with_FlexClip.mp4"></video><figcaption>今年下得最大的一场雨</figcaption></figure>
+
+![2107JA毕业照](./images/2023-summary/img-08-11d035.jpg)
+
+![2107JA毕业照](./images/2023-summary/img-09-d258ba.jpg)
+
+![2107JA毕业照](./images/2023-summary/img-10-2d05f0.jpg)
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/8-8_-_Compressed_with_FlexClip_%281%29.mp4"></video><figcaption>2107JA毕业项目答辩</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E5%A5%B3%E5%84%BF%E8%87%AA%E5%B7%B1%E6%8C%91%E8%A1%A3%E6%9C%8D.mp4"></video><figcaption>女儿自己挑衣服</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/8-11_-_Compressed_with_FlexClip_%281%29.mp4"></video><figcaption>和女儿一起吃火锅</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E5%A5%B3%E5%84%BF%E5%B7%B2%E7%BB%8F%E8%AF%BB%E5%88%9D%E4%B8%80.mp4"></video><figcaption>女儿已经读初一</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E6%9C%80%E6%84%9F%E4%BA%BA%E7%9A%84%E4%B8%80%E9%A6%96%E4%B9%A1%E6%9D%91%E9%9F%B3%E4%B9%901.mp4"></video><figcaption>最感人的一首乡村音乐</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E6%9C%80%E6%84%9F%E4%BA%BA%E7%9A%84%E4%B8%80%E9%A6%96%E4%B9%A1%E6%9D%91%E9%9F%B3%E4%B9%902.mp4"></video><figcaption>最感人的一首乡村音乐</figcaption></figure>
+
+![2107JA毕业聚餐](./images/2023-summary/img-11-da7bd4.jpg)
+
+![2107JA毕业聚餐](./images/2023-summary/img-12-4e0937.jpg)
+
+### 一年十二个月-September
+
+- 陪着他写作业，可是字还需要改进。加油小朋友！
+- 今年环湖自行车赛输给了他
+- 今年的中秋节月亮真圆
+- 9月最后一天我们大扫除，我们去卖废纸。
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/9-1_-_Compressed_with_FlexClip.mp4"></video><figcaption>陪着儿子一起写作业</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/9-2_-_Compressed_with_FlexClip.mp4"></video><figcaption>今年环湖自行车赛输给了他</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/9-3_-_Compressed_with_FlexClip.mp4"></video><figcaption>中秋节月亮真圆</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E5%8D%96%E5%BA%9F%E7%BA%B8.mp4"></video><figcaption>卖废纸</figcaption></figure>
+
+### 一年十二个月-October
+
+- 国庆节我们吃美食
+- 国庆节我们逛逛街，但好像在受罪
+- 骑了几年的自行车今天出问题了
+- 这么惬意的生活要是每天都有那该多好！下下棋，喝喝茶，唠唠嗑悠哉悠哉！小朋友好像能看懂似的！走吧！你爹的单车气打足了！可以再跟你溜几圈了！走走走，等你学会了再跟这两位爷爷切磋切磋！
+- 今天走路的姿势为什么这么妖娆?
+- 这个项目有点刺激！我都有点怕怕！如果再高一点，对于我这种恐高患者有点危险了。
+- 今晚一家人聚聚！给老婆过生日！
+- 我们来找巴勒斯坦！希望给他们的人民带来祝福！希望没有战争，希望和平永在！
+- Super man of today’s match!
+- 哦！今天还坐了个C位！部门一起吃饭！那就把酒举起来，好吃好喝一番！享受当下，享受彼此之间美好的同事时光！我们有缘一起，有缘相聚，希望再过十年，二十年…我们还能这样把酒言欢，享受当下！祝大家开心每一天！
+- 要不要买一台玩玩？
+- M3 Chip or M3 Pro Chip or M3 Max Chip
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E5%9B%BD%E5%BA%86%E8%8A%82%E5%90%83%E7%83%A4%E8%82%89.mp4"></video><figcaption>国庆节吃烤肉</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E5%9B%BD%E5%BA%86%E8%8A%82%E6%88%91%E4%BB%AC%E5%90%83%E7%BE%8E%E9%A3%9F.mp4"></video><figcaption>国庆节我们吃美食</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E5%9B%BD%E5%BA%86%E8%8A%82%E6%88%91%E4%BB%AC%E9%80%9B%E9%80%9B%E8%A1%97.mp4"></video><figcaption>国庆节我们逛逛街</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E9%AA%91%E4%BA%86%E5%87%A0%E5%B9%B4%E7%9A%84%E8%87%AA%E8%A1%8C%E8%BD%A6.mp4"></video><figcaption>骑了几年的自行车</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/10-5_-_Compressed_with_FlexClip.mp4"></video><figcaption>惬意的生活</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/10-6_-_Compressed_with_FlexClip.mp4"></video><figcaption>妖娆</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E7%BB%99%E8%80%81%E5%A9%86%E8%BF%87%E7%94%9F%E6%97%A5.mp4"></video><figcaption>给老婆过生日</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/10-9_-_Compressed_with_FlexClip.mp4"></video><figcaption>我们来找巴勒斯坦</figcaption></figure>
+
+![Super man of today’s match!](./images/2023-summary/img-13-01f92e.jpg)
+
+![C位](./images/2023-summary/img-14-cba816.jpg)
+
+![M3 Chip or M3 Pro Chip or M3 Max Chip](./images/2023-summary/img-15-4cb1fa.jpg)
+
+![M3 Chip or M3 Pro Chip or M3 Max Chip](./images/2023-summary/img-16-1302ab.jpg)
+
+### 一年十二个月-November
+
+- 每一次翻山越岭都是意志力的考验！每一次我握住你双手，大步向前时那都是幸福与希望！每一次我们在大自然的穿梭旅行都是大自然赐予我们的礼物！深秋的浪漫，深秋的陪伴！
+- 意面的故事：我今天总算知道你的厉害了！直接把我的抢了，注意，是抢了！太霸道了，太厉害了！我措不及防，我被震到了！这现在的小朋友也太不可思议了！吃了两盒啊，是两盒啊！我想：“意大利人民会感谢你啊！你给他们拉动了消费！！可是这意面是意大利人做的吗？哦，并不是！”总之我今天算是服了你
+- 这样的天气吃什么好呢？那当然羊肉炖萝卜！美味佳肴！真的绝了！绝了！整个身子都暖起来！
+- 我们登上了黑麋峰，长沙最高峰。很震撼！
+- 好久没有这么笑了。很开心！
+- 2110JA的全体同学祝你们毕业快乐！我是你们的正哥！我会永远是你们的正哥！你们在我心里面可能不是技术最出众的学员，但你们在我心中有种独特的感觉！一种很亲近的感觉，很舒服的感觉！不知道为什么我看到你们我就开心，就很轻松的感觉！带你们一段时间感情越来越深！日久见真情！最后三个月没能带你们一起爽确实有点遗憾，但我觉得我一直就在你们身边！我会时不时地问胖杨老师你们的情况！这也许就是一种爱，一种淡淡的爱，其实我很喜欢这种感觉！很多话想对你们说，但又不知道说哪里，说到什么程度！原谅我这一次讲得不多！我必须停下当下的写，我要回家收拾我家的小朋友了！他不做作业，看我怎么收拾他！哈哈哈😆
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/11-1_-_Compressed_with_FlexClip.mp4"></video><figcaption>每一次翻山越岭都是意志力的考验</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/11-2_-_Compressed_with_FlexClip.mp4"></video><figcaption>意面</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/11-3_-_Compressed_with_FlexClip.mp4"></video><figcaption>羊肉炖萝卜</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/11-4_-_Compressed_with_FlexClip.mp4"></video><figcaption>黑麋峰</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/11-5_-_Compressed_with_FlexClip.mp4"></video><figcaption>再见了，黑麋峰</figcaption></figure>
+
+![好久没有这么笑了](./images/2023-summary/img-17-30a86e.jpg)
+
+![2110JA毕业照](./images/2023-summary/img-18-c74f06.jpg)
+
+![2110JA毕业照](./images/2023-summary/img-19-992140.jpg)
+
+![2110JA毕业照](./images/2023-summary/img-20-736b86.jpg)
+
+### 一年十二个月-December
+
+- 国际象棋的故事：两个小朋友玩得不亦乐乎！小朋友国际象棋玩得真不错！我都玩不过他了！关于国际象棋，我想说的是从他身上我看到了他的强大！我看到一个如果有兴趣的东西在一个人的身上会有无限可能性的发生！我不敢说玩棋对他来说意味着什么，但至少我为他的坚持，为他的这份热情而感到骄傲！这是一种难得可贵的精神，是一种力量，是一种生命绽放的方式！我为之骄傲，为之点赞！有时我会在他身上看到我自身的不足，也会有时看到他的扩展性！我确实有时会看到他超越我的地方！我称之为扩展点！就类似于Spring框架一样，它能给我们提供无限扩展机制！我希望我的小朋友能继续加油，成就更加辉煌的未来！我从来没有看到过他对一个东西有如此大的兴趣！他可以为输一局大哭一场！有时我觉得这种瞬间最真实，最美丽！我觉得这就是生活中最美丽的一面！其实那种不服输的状态，不服输的眼泪最真实！这种眼泪会让你变得更加强大！加油，我的小朋友！
+- 只是一个很好的锻炼身体的游戏，出汗真爽！
+- 给自己定个目标吧！其实不仅是小朋友你要心中有梦想，有目标。其实我也要好好想想自己的未来该如何继续！这是一个沉重的话题，心中充满希望但也有挑战！year
+  by year! age++！我并不是害怕老去，我不是害怕自己的能力弱化，其实想来想去我不应该害怕！我是打不死的拼命三郎！加油，正哥！
+- 这也许是2023年最后一次登虎山亭了！天气真好！偶尔太阳会露出它灿烂的笑容！其实没有想象中那么冷！很舒服的感觉！其实冷过后会暖，雨后会见到彩虹！小朋友真的已经长大了！曾经害怕的信号塔终于成为他的好伙伴，不再是恶魔！曾经要抓住我一起向上走那现在已经甩我两条街了！这就是人生的体验，这就是长大！我想记住这每一个瞬间！
+- 好不容易找到这首歌的现场版！怎么样？这两位Blues老炮演奏得很棒哦！口琴演奏非常棒！越老越妖、
+- 年度我最爱的三位歌手 #ChrisStapleton #BuddyGuy #MightyMoRodgers
+- 年度我最爱的音乐风格！#Blues #Country
+- 年度我最爱的吉他手！#EricClapton
+- 2023年的最后一天上班结束了！做个记录，做个纪念！我爱我的笔电💻！它陪了我整整八年！它依然坚挺，依然顺畅！没有它我都不知道我能做什么！它绝对是我的最佳生产力工具！真的要感谢它为我带来的工作效率！我爱我的水壶！它能让我一天下来能量满格！喝口水我瞬间清醒！喝口水让我身体健康！我爱我的学员！在这即将跨年之际还不忘送我哇哈哈！太棒了！让我们在未来的日子里一起努力，一起加油！让我们整天笑口常开！我爱自己！因为自己是一切美好事物的主体！祝自己新年快乐！2024一切顺利！
+- 2201JA&2208JA全体学员在这2023年最后的工作时间里彼此给对方一个最美好的祝愿吧！相信你们在2024年能够实现自己的梦想！看见你们努力的画面我很踏实，很欢喜，很亢奋，很自信！我相信你们一定能成就自我，实现自我价值！不管未来有多么艰难和坎坷，只要我们在一起，只要能够努力撸代码！只要紧跟我的脚步，我相信你们一定会成为出色的Java Programmer！Come on guys! Best wishes to you! I’m proud of you!
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/12-1_-_Compressed_with_FlexClip.mp4"></video><figcaption>国际象棋的故事</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/12-2_-_Compressed_with_FlexClip.mp4"></video><figcaption>一个很好的锻炼身体的游戏</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/12-3_-_Compressed_with_FlexClip.mp4"></video><figcaption>给自己定个目标吧</figcaption></figure>
+
+![最后一次登虎山亭](./images/2023-summary/img-21-7ddd35.png)
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/%E8%80%81%E7%82%AE%E7%8E%B0%E5%9C%BA%E7%89%88.mp4"></video><figcaption>老炮现场版</figcaption></figure>
+
+![音乐偏好口味](./images/2023-summary/img-22-ed1a7d.jpg)
+
+![音乐偏好口味](./images/2023-summary/img-23-185c31.jpg)
+
+![Buddy Guy](./images/2023-summary/img-24-eddba4.jpg)
+
+![Mighty Mo Rodgers](./images/2023-summary/img-25-53c8cb.jpg)
+
+![Chris Stapleton](./images/2023-summary/img-26-28fed3.jpg)
+
+![Eric Clapton](./images/2023-summary/img-27-7f2699.jpg)
+
+![Eric Clapton](./images/2023-summary/img-28-debf89.jpg)
+
+![Eric Clapton](./images/2023-summary/img-29-d026f3.jpg)
+
+![Eric Clapton](./images/2023-summary/img-30-2d7acf.jpg)
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/12-15_-_Compressed_with_FlexClip.mp4"></video><figcaption>2023年的最后一天</figcaption></figure>
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/12-16_-_Compressed_with_FlexClip.mp4"></video><figcaption>最美好的祝愿</figcaption></figure>
+
+## 折腾
+
+这里的折腾，更多是技术、学习、社区上的一些折腾，今年开始有意识的去探索一些新东西，分享自己折腾的东西，在朋友圈发表自己观点、看到的好东西，慢慢的发现不一样的世界，很有趣的过程。
+
+### 2023 我的 Browser 之旅
+
+- **找一些好用的 Extensions**
+- **有了这些扩展，工作效率急剧提升，你瞬间成为大牛**
+
+![我使用的浏览器](./images/2023-summary/img-31-5fe564.png)
+
+![我使用的浏览器扩展](./images/2023-summary/img-32-3cc92b.png)
+
+### 2023 我的 Terminal 之旅
+
+- 好久没有折腾电脑的命令行终端工具了，之前用了好多年的 Cmder，由于颜值党的缘故去年开始使用 Hyper 和
+  Tabby。
+
+![Cmder](./images/2023-summary/img-33-39be48.png)
+
+![Tabby](./images/2023-summary/img-34-96db8e.png)
+
+![Hyper](./images/2023-summary/img-35-13a050.png)
+
+### 2023 我的 Notebook 软件之旅
+
+- 使用 Notion 之前一直使用 Typora，不算好看但是很易用，不过后面变成收费模式，很坑。后面有试过
+  Logseq、Bear、MWeb、语雀、Obsidian 等，个人原因还不是很习惯，还是觉得 Notion好用。但是 Logseq 和 Obsidian
+  也确实很不错啊！
+
+![Notion](./images/2023-summary/img-36-ba2ea7.webp)
+
+### 2023 我的 Drawing Diagram 软件之旅
+
+- 在这里我强烈推荐使用 Drawio。但是最近我发现我爱上了 Figma 这款软件。它简直就是颜值逆天，而且它有丰富的
+  Plugins,Widgets,Templates,Stickers
+- Figma 可惜是收费软件。期待它能开源，免费。
+
+![Figma](./images/2023-summary/img-37-ab4f88.png)
+
+![Figma](./images/2023-summary/img-38-42a5f3.png)
+
+### 2023 我的 Whiteboard 软件之旅
+
+- 在这里我强烈推荐使用 WonderPen（妙笔）。我最爱它的白板功能。一些非重要的原理讲解我会在这里完成。重要的原理或源码流程图我会使用建模软件。但是我发现
+  WonderPen 基本可以解决 80% 的任务。
+- 而且它支持 Markdown 语法。它的字体是不是很卡哇伊(*^ω^*)。说实话我很喜欢这个字体。
+- It’s a so awesome tool for me!!!
+
+![WonderPen](./images/2023-summary/img-39-d9520c.png)
+
+![WonderPen](./images/2023-summary/img-40-0040a6.png)
+
+### 2023 跟 Notion 可以抗衡的一款神器：Craft
+
+- 功能似乎比 Notion 还强。
+- 最主要是颜值绝对惊人。不信你试试！还有很适合新手使用。
+- 写笔记有点像搭积木一样.从右边的组件栏拖到 Workarea 即可，so good！
+- 使用 Craft 还有一个缘故。那就是它的AI功能。太他妈的牛掰了！
+- 来吧，体验一把吧！
+
+![Craft](./images/2023-summary/img-41-4bac9c.webp)
+
+### 2023 不得不提的 Chatgpt
+
+- 如果你还没有使用 Chatgpt,那你真的落伍了！
+- 来吧，体验一把！
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/2023_summary/Chatgpt.mp4"></video><figcaption>Chatgpt</figcaption></figure>
+
+### 2023 第三方AI产品-OneGPT
+
+- 如果你喜欢使用 Desktop ChatGPT，那就试试 OneGPT。你会觉得很好用。
+- 来吧，体验一把！
+
+### 2023 最懂程序员的新一代 AI 搜索引擎
+
+- 非 devv_ 莫属
+- 有了它我基本不再使用：https://stackoverflow.com/
+- google 也用得少了，当然非技术问题还是会用
+- 来吧，体验一把！
+
+### 2023 我的 IDE 之旅
+
+- 我的开发工具箱里面有什么？
+- 四个主力军，依然强劲。
+- 我爱死它们了！
+- 安装几个我觉得特棒的插件
+  - Coderpillr Theme：超级好看的一个主题，之前试过很多如 One Dark、Material Theme UI 都不是很满意，刚好
+    Coderpillr 这个小众的很有 Dracula 风格，深得我心。
+  - 其实还有一个 Gerry+ Dark(Pro) Theme，我现在正在使用
+  - .ignore：自动提示你哪些文件可以被 ignore，省去新项目场景一个一个找的问题
+  - WakaTime：需要稍微配置一下，可以将你所有敲代码的地方装上这个插件，可以很访问的统计你敲了多长时间的代码，详细见官网。
+  - Github Copilot：不用再怀疑要不要安装它了，反正大佬们都安装了它。
+  - Codeium AI AutoComplete：我反正觉得它比 Github Copilot 好用。它的提示功能绝对是一流。绝对的生产力工具。
+  - ...还有很多插件，我不再赘述。我的插件
+- JetBrains Toolkits 香的地方在哪里？
+  - 世界上最好用 Git 管理工具
+  - 很安稳的重构&优化代码的神器
+  - 智能提示真的很强
+  - 潮流功能 Code With Me 实时调试他人的代码
+  - 还有不少小惊喜的功能
+
+![IDEA](./images/2023-summary/img-42-bf63ae.png)
+
+### 2023 工作学习
+
+- 我认为的学习，主要是输入和输出这两块，输入今年更多是学习了除 Java 之外的，比如 AI
+  相关的知识，输出主要是给学员讲课，以及写一点东西。
+- 输出
+
+![Output-1](./images/2023-summary/img-43-47f52d.png)
+
+![Output-2](./images/2023-summary/img-44-23e5ae.png)
+
+![Output-3](./images/2023-summary/img-45-cdc3e4.png)
+
+![Output-4](./images/2023-summary/img-46-7e8ca7.webp)
+
+![Output-5](./images/2023-summary/img-47-150b5d.webp)
+
+![Output-6](./images/2023-summary/img-48-92bceb.webp)
+
+### 2023 总结
+
+- 一周 7 天有 5 天都在上班，工作属于一生花时间最多的一块了，不过比较幸运，在公司 6
+  年多做的大部分是自己喜欢的事情，还算知足。
+- 其实 2023 年也有不少遗憾，包括降薪之类的事情，不过我 Keep Going
+  锻炼身体，整个人的状态有很大提升。其实日子有时候过着也比较重复无聊，不过一年到头 365 天也存在些闪亮的点。
+- 没有遗憾，热爱生活，热爱生命。
+
+## 2024 展望
+
+- 深入技术，AI 学习
+- 读书
+- 写博客
+- 继续折腾
+
+![AI-1](./images/2023-summary/img-49-5acc99.png)
+
+![AI-2](./images/2023-summary/img-50-04aa7b.png)
+
+![AI-3](./images/2023-summary/img-51-da9c8f.png)
+
+![AI-4](./images/2023-summary/img-52-c4883d.png)
+
+![AI-5](./images/2023-summary/img-53-198a33.webp)
+
+![Output-7](./images/2023-summary/img-54-e61557.webp)
+
+![Output-8](./images/2023-summary/img-55-f6c4fb.webp)
+
+![Output-9](./images/2023-summary/img-56-f212ea.png)
+
+![Output-10](./images/2023-summary/img-57-f55136.webp)
+
+![Output-11](./images/2023-summary/img-58-334e32.webp)
+
+![Output-12](./images/2023-summary/img-59-4b1a9a.png)
+
+![Output-13](./images/2023-summary/img-60-c19188.png)
+
+![Output-14](./images/2023-summary/img-61-ed5c1c.webp)
+
+![Output-15](./images/2023-summary/img-62-c8b6ed.webp)
+
+![Output-16](./images/2023-summary/img-63-a8ca8e.webp)
+
+![Output-17](./images/2023-summary/img-64-604161.png)
+
+![Output-18](./images/2023-summary/img-65-058c39.webp)
+
+## 结尾
+
+2023 年过后我就 43 岁了，一直很无耻的感觉自己才 23
+岁，真不敢想象时间怎么过得这么快，虽然经历越来越丰富，但一年的时间感觉比小时候要感觉短很多，真的有时候会觉得惋惜和遗憾。
+
+发现身边不少人随着时间的变化，慢慢的就会变成应该要成为的样子，比如从学生踏入社会里面就变成了一个成年人，从年轻人到中年人到老年人。我感觉我在角色变化上一直好像都是被动的，好像要被外力推着走才行。我感觉我一直没有长大。
+
+不过这种心态我觉得也挺好，年轻嘛，这样会让我活得更轻松一些，可能是大学里稀里糊涂喜欢上了Coding，在毕业时找到了与程序相关的工作，不需要去考虑太多人情世故的东西，要是不学计算机去做了别的行业，可能很难适用现在的社会啊！
+
+回到现在的43岁，希望能一直保持住 too young too simple
+的状态。希望50岁，60岁的时候心态也还是这种年轻的感觉，依旧潮流，时尚，依旧喜欢折腾，依旧喜欢 Coding，依旧喜欢
+Writing Blog。不去附和，不去应酬，不跟风，不攀比，不要变得油腻，让自己舒舒服服过日子就好了！

@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SERIES } from '../consts';
+import { formatDate, getPosts, postUrl, readingTime } from '../utils';
+const posts = await getPosts();
+const years = [...new Set(posts.map((p) => p.data.date.getUTCFullYear()))].sort((a, b) => b - a);
+---
+<BaseLayout title="归档" description="按时间线浏览周正的全部文章。">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Archive</span>
+      <h1>归档 <span class="grad-text">Timeline</span></h1>
+      <p>{posts.length} 篇文章，按年份倒序排列。</p>
+    </div>
+  </section>
+  <section class="container timeline-wrap">
+    {years.map((y) => {
+      const list = posts.filter((p) => p.data.date.getUTCFullYear() === y);
+      return (
+        <div class="year reveal">
+          <h2><span class="grad-text">{y}</span> <small>{list.length} 篇</small></h2>
+          <ol class="timeline">
+            {list.map((p) => (
+              <li>
+                <time datetime={p.data.date.toISOString()}>{formatDate(p.data.date).slice(5)}</time>
+                <a href={postUrl(p)}>{p.data.title}</a>
+                <span class="meta">
+                  {p.data.series && <span class="s">{SERIES[p.data.series].title}</span>}
+                  <span>{readingTime(p.body).minutes} 分钟</span>
+                </span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      );
+    })}
+  </section>
+</BaseLayout>
+<style>
+  .timeline-wrap {
+    max-width: 900px;
+    padding-bottom: 100px;
+  }
+  .year + .year {
+    margin-top: 48px;
+  }
+  h2 {
+    font-size: 34px;
+    margin: 0 0 18px;
+    font-weight: 900;
+  }
+  h2 small {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--faint);
+    margin-left: 8px;
+  }
+  .timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 22px;
+    border-left: 1px solid var(--border-strong);
+  }
+  .timeline li {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 16px;
+    padding: 14px 0;
+    border-bottom: 1px dashed rgba(128, 146, 255, 0.12);
+  }
+  .timeline li::before {
+    content: '';
+    position: absolute;
+    left: -27px;
+    top: 22px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--accent);
+    transition: background 0.2s, box-shadow 0.2s;
+  }
+  .timeline li:hover::before {
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+  }
+  time {
+    font-family: var(--font-mono);
+    font-size: 13.5px;
+    color: var(--accent-3);
+    width: 48px;
+  }
+  .timeline a {
+    flex: 1 1 280px;
+    min-width: 0;
+    color: #e3e7f7;
+    font-size: 16px;
+    transition: color 0.2s;
+  }
+  .timeline a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: var(--accent);
+  }
+  .meta {
+    display: flex;
+    gap: 10px;
+    font-size: 12.5px;
+    color: var(--faint);
+  }
+  .meta .s {
+    color: #c7cdfb;
+  }
+</style>

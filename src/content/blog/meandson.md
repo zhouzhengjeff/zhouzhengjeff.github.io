@@ -1,0 +1,130 @@
+---
+title: "2024年的9月，我和我的儿子"
+date: 2024-10-15
+description: "现在是10月15号下午两点三十分。"
+series: daily
+tags:
+  - "个人日常"
+  - "个人生活"
+  - "我和儿子"
+cover: "./images/meandson/img-01-cfbd45.jpg"
+sourceFile: "2024-10-15-MeAndSon.md"
+---
+
+## 个人习惯
+
+现在是10月15号下午两点三十分。
+
+我心有点乱，感觉工作效率很低。于是拿起手机开始刷起了朋友圈。
+
+我有个习惯：喜欢回忆过去，看看以前发生的那些有趣的点点滴滴，而且特别喜欢穿越到那时的情景再去感受一次那个气氛。我把这种
+Action 称之为幸福回忆或二次体验。而且在这整个 Process 中我特别喜欢拍摄视频（Video），而不喜欢拍照（Photo）。因为我特别喜欢
+Live 的 Feeling，而不喜欢 Static Style。
+
+我36岁那年，很糟糕的一年，一个悲伤的故事，这个故事让我永生难忘。当故事完结后我看透了一些东西，我领略了一些道理。我告诫自己：热爱生命比其他做任何事情都重要。没有了生命，没有了身体，那一切都是浮云。我暗自下定决心，告诫自己：珍惜当下的每一天，热爱生命，保重好自己的身体，去享受每一天带给自己的快乐，无论这一天有多么倒霉或不开心也要让自己朝着有光，有温度的地方奔去。有光，有温度才有希望，有了希望才能有充分的理由去热爱世界，去体验人世间的酸甜苦辣。在这个热爱，体验的过程中，你需要不断的付出和奉献，拿出自己的善意和包容对待每一个你身边的人，久而久之你的心灵和灵魂会得到升华，你会感受到整个生活充满阳光，你会认识到整个世界都充满了
+Love。我觉得这是一笔巨大的财富。我必信有付出必有回报，然而得到了回报后你也需要懂得感恩，懂得珍惜。人生活在这个世界上就是这样的轮回，勇敢面对未来发生的一切，不管发生什么都要坦然
+Face It。要让自己的每一天都过得快乐。人生苦短，时间匆匆，生命重要，珍惜当下。
+
+好像有点跑题，不是要回忆9月和儿子的点点滴滴吗？可能是职业的原因，太具有发散思维，我想到哪就写到哪。这样的随性而活不好吗？
+
+## 回忆
+
+言归正传，9月应该是我最喜欢的一个月份。它是收获的季节，开学的季节，开始追逐梦想的季节，当然也是我思绪万千的季节：
+
+- 喜欢每个周末带着儿子去徒步旅行
+- 喜欢走在 Country Road 上看着美丽的花园和闻着泥土的气味
+- 喜欢骑着自行车在湖边游荡，一边前行一边欣赏美丽的湖水。偶尔微风拂面而来让我能感受到丝丝凉意，但能把我的悲伤吹散，吹走
+- 喜欢牵着儿子的手翻越一座一座的小山坡
+- 喜欢…
+
+太多太多的回忆，太多太多的喜欢充斥着我的心。让我无比欢欣喜悦，让我无比怀念跟儿子在一起的瞬间。
+
+### 开学
+
+9月1日，还是忍不住送儿子去上学！学校门口很热闹，每个小朋友都身穿校服，戴上红领巾，高高兴兴地去上学！沉寂了两个月的校园恭迎各位小朋友的到来！此刻想起小时候的我，每逢开学的当天会很兴奋，很期待！因为可以见到阔别已久的同学，可以领到新书，可以见到心爱的老师...但是这些我读书时候的乐趣已经一去不复返！其实很怀恋当初，很喜欢读书时候的感觉！很单纯，很自在，很激情，很阳光！九月一日，最怀念的读书的我们！
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/kaixue.mp4"></video><figcaption>School Starts</figcaption></figure>
+
+送完儿子上学，来这个卤艺德吃了碗卤粉！还是老婆推荐我过来！尝了一口味道不错！发现店里的服务员态度太好了！帮我倒水！搞得我有点不好意思！收银员应该是老板，人特别友善！她绝不是一个打工仔，我想她应该是这家店的老板娘。就冲着他对产品的解说，我严重怀疑她以前是不是一位超强的产品经理，在介绍自家产品的时候那风度，那口才绝对一流，那真是相当到位！感觉是来到了一场卤粉产品发布会，听完后不买都觉得不好意思的那种感觉！反正我全程听下来，感觉她对自己的产品非常了解而且没有一点“刺耳”的声音，听得很舒服！
+
+放学回家，儿子跟我寒暄了几句，二话不说就拉我开始这说走就走的骑行！那好吧，跟他环湖骑行吧！昨天没有实现的目标今天一定得完成！我看了当下的温度：41摄氏度！他并没有说一句热，累，反而很有激情！说心里话看到他这么执着，这么热爱一件事我打心底里开心！不管多累，多苦我都愿意陪着你！一路上有你，苦一点也愿意！
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/fangxue.mp4"></video><figcaption>After School</figcaption></figure>
+
+### 柠檬水，鸡公煲
+
+9月7日，今天实在是太热了！走过柠季！来杯新品体验一下！西瓜(๑˃̵ᴗ˂̵)و🍉 plus 荔枝 plus 柠檬🍋哇，绝配！Nice!
+Delicious！
+
+![Lemonade](./images/meandson/img-01-cfbd45.jpg)
+
+来到宜得利，发现这里的商品还算便宜！走进去有个卖沙发🛋的大厅，里面摆满了沙发！沙发上坐满了人，每个人都躺在那刷着手机！我想这里已变成了大众舒适区！不过发现今天儿子特别帅！
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/yideli.mp4"></video><figcaption>宜得利</figcaption></figure>
+
+晚上回来，带儿子去吃晚饭。今天直接把儿子给饿坏了！这个时候陪他来吃他想吃的鸡公煲！问了他几次想吃什么！他思考了许久，然后冒了一句让我猝不及防的话！他说：“什么样的晚餐热量最低我就吃它。我需要减肥，我要把腹肌练出来！”这句话真的把我雷到了！我在想：难道你也在减肥吗？难道你也开始卷起身材！你这搞得我很有压力！这咋整？汉堡，炸鸡，面包什么的一律不吃了！好吧，既然你这么卷，我也跟你卷一次！
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/jigongbao.mp4"></video><figcaption>鸡公煲</figcaption></figure>
+
+### 锻炼身体
+
+9月13日，儿子开始锻炼身体。我打算跟着他一起锻炼身体，我觉得他的训练动作很专业，很标准。他很专注地干着他感兴趣的事情！他的专注感染到我！我不能掉队啊！
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/duanlian.mp4"></video><figcaption>Exercise</figcaption></figure>
+
+### 吃鸡
+
+9月15号，今晚咱们来吃鸡！这奥尔良整鸡确实不错，太棒了！我已经把它变成了手撕鸡！儿子已经直接上手吃起来！
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/chiji.mp4"></video><figcaption>吃鸡</figcaption></figure>
+
+### 登山
+
+9月16号，天气很好，亲朋好友一起爬岳麓山！米多小朋友可萌了！今天爬山的人真多！
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/yuelushan.mp4"></video><figcaption>岳麓山</figcaption></figure>
+
+9月22号，很久没来桃花岭。虎山亭我们又来了。我们一口气爬上去。我们一路超过很多人，他们个个都是气喘吁吁！此时我心里还有点窃喜！感知锻炼身体后人身体素质好了很多！似乎爬上来无感，只是头上冒了几粒汗珠而已，而且发现儿子爬上来也似乎没什么感觉！
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/hushanting.mp4"></video><figcaption>桃花岭</figcaption></figure>
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/hushanting1.mp4"></video><figcaption>虎山亭</figcaption></figure>
+
+### 中秋节
+
+9月17号，今天中秋节。没想到到了外婆家都不肯回家了！其实不回家是因为可以在外婆家为所欲为。其实人就是环境的产物！换了一个环境，角色就做一次转换！每个人在一个
+Context 中扮演着 Different
+Role！我想：也许在这儿儿子会是最放松的时候，他很自由很阳光，想做什么就做什么！这个时候他有着多重角色，那这些角色做并集后权限会很大。达到了比我权限还高的
+level！
+但是一旦回到家他只能必须扮演一个角色：儿子！那在他心里面儿子这个角色就会被老子给控制着，压迫着！其实这一想想，这就是人类社会的规则！规则的打破比登天还难，感觉打破它就是违背常理！我会感觉这样活着会好累，我不愿让他这样活着！所以我决定以后很多事情让他自己决定就好，怎样舒服就怎么去，但自己要为后果负责就好！
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/zhongqiujie.mp4"></video><figcaption>中秋节</figcaption></figure>
+
+### 自拍
+
+9月21号，我们又准备出去骑行。这次在电梯里我们来了一次自拍。发觉自己好像瘦了很多，而且还发现儿子好像又长高了。
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/zipai.mp4"></video><figcaption>自拍</figcaption></figure>
+
+### 梅溪湖
+
+骑在途中，发现池塘里的荷花真漂亮。都快十月还有这么多荷花🪷！真美！很治愈！
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/hehua.mp4"></video><figcaption>荷花</figcaption></figure>
+
+来到湖中央，发现今天儿子这身装扮很帅！很简单朴素，但很阳光很帅气！嗯！我很喜欢他今天这身装扮！不错，看到他帅的一面！
+
+<figure class="video"><video controls preload="none" playsinline src="https://cdn.jsdelivr.net/gh/zhouzhengjeff/zhouzhengjeff.github.io@cca264d5f188c0f9d9b538c1c7d78dbff7114933/assets/huzhongyang.mp4"></video><figcaption>梅溪湖</figcaption></figure>
+
+### 西西弗书店
+
+9月30号，儿子放假了，我在学校门外接他回家！我知道今天要他乖乖写作业其实有点困难。于是我问到：“想去哪里？”其实我想让他来书店看看书。没想到他跟我不谋而合！他冲进了书店，选了一本书，坐到了地板上！他特别迷《米吴科学漫画》！一边看一边笑着，有时还嘴里念叨一下东西！我想：这是热爱的一种表现形式吗？也许着迷的人都会这样，会融入那个故事里去！我觉得特别有趣，特别真实！我也很想来一次这种着迷，一种对新鲜事物的融入！
+
+## 结束
+
+回顾这个9月，我和儿子度过了许多美好的时光。从他对健康的关注，到我们一起锻炼身体；从登山时的默契，到中秋节在外婆家的欢乐；从骑行途中的自拍，到书店里他沉浸在科学漫画中的专注。这些点点滴滴都让我深深感受到，作为父亲，能够陪伴孩子成长是多么珍贵的经历。
+
+这个月，我看到了儿子的多面性：他既有追求健康的决心，又有对知识的渴望；他在家人面前活泼自在，在运动中又展现出坚持和毅力。这让我意识到，作为父母，我们应该给予孩子更多的空间和信任，让他们在不同的环境中自由发展，找到属于自己的生活方式。
+
+9月的种种回忆，不仅是对过去的珍藏，更是对未来的期许。我希望能继续保持这样的相处模式，既做儿子的榜样，又做他的朋友。让我们一起成长，一起探索这个丰富多彩的世界，创造更多美好的回忆。
+
+生活就像一本书，而9月只是其中精彩的一个章节。我期待着与儿子一起书写更多精彩的篇章，让我们的故事继续…

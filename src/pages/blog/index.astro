@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { allTags, getPosts } from '../../utils';
+const posts = await getPosts();
+const tags = allTags(posts);
+---
+<BaseLayout title="博客" description="周正的博客：工作之外系列、我的日常、年度总结、代码之外。">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Blog</span>
+      <h1>博客 <span class="grad-text">Writing</span></h1>
+      <p>共 {posts.length} 篇文章 · {tags.length} 个标签。点击标签即可筛选。</p>
+    </div>
+  </section>
+  <section class="container blog-wrap">
+    <div class="filter" role="group" aria-label="按标签筛选">
+      <button class="tag is-active" data-filter="" aria-pressed="true">全部 <b>{posts.length}</b></button>
+      {tags.map((t) => (
+        <button class="tag" data-filter={t.tag} aria-pressed="false">#{t.tag} <b>{t.count}</b></button>
+      ))}
+    </div>
+    <p class="result" id="result" aria-live="polite"></p>
+    <div class="grid grid-3" id="post-grid">
+      {posts.map((p, i) => <PostCard post={p} delay={0.05 * (i % 3)} eager={i < 3} />)}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .blog-wrap {
+    padding-bottom: 80px;
+  }
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+    max-height: 132px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.4s;
+  }
+  .filter.collapsible:not(.expanded) {
+    -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent);
+    mask-image: linear-gradient(180deg, #000 70%, transparent);
+  }
+  .filter.expanded {
+    max-height: 1200px;
+  }
+  .filter button {
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+  }
+  .filter b {
+    font-weight: 600;
+    color: var(--faint);
+    margin-left: 2px;
+  }
+  .filter .is-active b {
+    color: #dfe4ff;
+  }
+  .result {
+    min-height: 1.6em;
+    margin: 0 0 18px;
+    color: var(--faint);
+    font-size: 14px;
+  }
+  .result button {
+    background: none;
+    border: 0;
+    color: var(--accent-3);
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+  }
+  :global(.post-card[hidden]) {
+    display: none;
+  }
+</style>
+
+<script>
+  const btns = Array.from(document.querySelectorAll<HTMLButtonElement>('.filter [data-filter]'));
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('#post-grid .post-card'));
+  const result = document.getElementById('result')!;
+  const filterBox = document.querySelector<HTMLElement>('.filter')!;
+  // 标签较多时，提供展开/收起
+  if (filterBox.scrollHeight > filterBox.clientHeight + 4) {
+    filterBox.classList.add('collapsible');
+    const more = document.createElement('button');
+    more.textContent = '展开全部标签';
+    result.before(more);
+    more.className = 'btn';
+    more.style.cssText = 'padding:6px 14px;font-size:13px;margin-bottom:12px';
+    more.addEventListener('click', () => {
+      const ex = filterBox.classList.toggle('expanded');
+      more.textContent = ex ? '收起标签' : '展开全部标签';
+    });
+  }
+  const apply = (tag: string, push = true) => {
+    let n = 0;
+    for (const c of cards) {
+      const tags: string[] = JSON.parse(c.dataset.tags || '[]');
+      const show = !tag || tags.includes(tag);
+      c.hidden = !show;
+      if (show) {
+        n++;
+        c.classList.add('is-visible');
+      }
+    }
+    for (const b of btns) {
+      const on = b.dataset.filter === tag;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', String(on));
+    }
+    result.innerHTML = tag ? `标签 <strong>#${tag}</strong> 下共 ${n} 篇 · <button type="button" id="clear">清除筛选</button>` : '';
+    document.getElementById('clear')?.addEventListener('click', () => apply(''));
+    if (push) {
+      const url = new URL(location.href);
+      tag ? url.searchParams.set('tag', tag) : url.searchParams.delete('tag');
+      history.replaceState(null, '', url);
+    }
+  };
+  btns.forEach((b) => b.addEventListener('click', () => apply(b.dataset.filter || '')));
+  const initial = new URLSearchParams(location.search).get('tag');
+  if (initial) apply(initial, false);
+</script>

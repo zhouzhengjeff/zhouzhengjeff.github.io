@@ -1,0 +1,127 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE } from '../consts';
+import { withBase } from '../utils';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  publishedTime?: Date;
+  tags?: string[];
+  noindex?: boolean;
+}
+const { title, description = SITE.description, image, type = 'website', publishedTime, tags = [], noindex = false } = Astro.props;
+const fullTitle = title ? `${title} | ${SITE.title}` : `${SITE.title} — 程序员 · Java & AI Agent 讲师 · 创作者`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL(image ?? withBase('/og.jpg'), Astro.site);
+const jsonLd =
+  type === 'article'
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: title,
+        description,
+        datePublished: publishedTime?.toISOString(),
+        author: { '@type': 'Person', name: SITE.author, url: Astro.site?.toString() },
+        image: ogImage.toString(),
+        mainEntityOfPage: canonical.toString(),
+        keywords: tags.join(','),
+      }
+    : {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: '周正',
+        alternateName: ['Zheng Zhou', 'Jeff Chou', '正哥', '爪哇爹'],
+        jobTitle: '程序员 / Java & AI Agent 讲师 / 创作者',
+        url: Astro.site?.toString(),
+        email: `mailto:${SITE.email}`,
+        sameAs: [SITE.github, SITE.x],
+      };
+---
+<!doctype html>
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={SITE.author} />
+    <meta name="theme-color" content="#050816" />
+    <meta name="color-scheme" content="dark" />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
+    <link rel="apple-touch-icon" href={withBase('/apple-touch-icon.png')} />
+    <link rel="alternate" type="application/rss+xml" title={SITE.title} href={withBase('/rss.xml')} />
+    <link rel="sitemap" href={withBase('/sitemap-index.xml')} />
+
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={SITE.title} />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:title" content={title ?? SITE.title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime.toISOString()} />}
+    {tags.map((t) => <meta property="article:tag" content={t} />)}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content={SITE.xHandle} />
+    <meta name="twitter:creator" content={SITE.xHandle} />
+    <meta name="twitter:title" content={title ?? SITE.title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script is:inline>document.documentElement.classList.remove('no-js');</script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">跳到正文</a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      // 滚动渐显 + 卡片 3D 倾斜 + 鼠标高光
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const els = document.querySelectorAll<HTMLElement>('.reveal');
+      if (reduce || !('IntersectionObserver' in window)) {
+        els.forEach((el) => el.classList.add('is-visible'));
+      } else {
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const e of entries) {
+              if (e.isIntersecting) {
+                e.target.classList.add('is-visible');
+                io.unobserve(e.target);
+              }
+            }
+          },
+          { rootMargin: '0px 0px -8% 0px', threshold: 0.08 },
+        );
+        els.forEach((el) => io.observe(el));
+      }
+      const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      document.querySelectorAll<HTMLElement>('.card').forEach((card) => {
+        card.addEventListener('pointermove', (ev) => {
+          const r = card.getBoundingClientRect();
+          const x = ev.clientX - r.left;
+          const y = ev.clientY - r.top;
+          card.style.setProperty('--mx', `${x}px`);
+          card.style.setProperty('--my', `${y}px`);
+          if (fine && !reduce && card.hasAttribute('data-tilt')) {
+            const rx = (y / r.height - 0.5) * -7;
+            const ry = (x / r.width - 0.5) * 9;
+            card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
+          }
+        });
+        card.addEventListener('pointerleave', () => {
+          card.style.transform = '';
+        });
+      });
+    </script>
+  </body>
+</html>

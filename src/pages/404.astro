@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../utils';
+---
+<BaseLayout title="404 页面未找到" noindex>
+  <section class="nf page-hero">
+    <div class="container">
+      <p class="code grad-text" aria-hidden="true">404</p>
+      <h1>页面走丢了</h1>
+      <p>你访问的页面不存在，或者已经迁移到了新地址。<br /><code>NullPointerException: page not found</code></p>
+      <div class="actions">
+        <a class="btn btn-primary" href={withBase('/')}>返回首页</a>
+        <a class="btn" href={withBase('/blog/')}>浏览博客</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .nf {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .nf p {
+    margin-inline: auto !important;
+  }
+  .code {
+    font-size: clamp(96px, 20vw, 200px);
+    font-weight: 900;
+    line-height: 1;
+    margin: 0;
+    font-family: var(--font-mono);
+    filter: drop-shadow(0 0 30px rgba(124, 92, 255, 0.5));
+  }
+  code {
+    font-family: var(--font-mono);
+    color: var(--accent-3);
+    font-size: 14px;
+  }
+  .actions {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+</style>
