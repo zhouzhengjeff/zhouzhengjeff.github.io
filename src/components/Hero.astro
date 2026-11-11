@@ -42,7 +42,7 @@ const { postCount, tagCount, videoCount } = Astro.props;
         <div><dt>文章</dt><dd>{postCount}</dd></div>
         <div><dt>标签</dt><dd>{tagCount}</dd></div>
         {videoCount ? <div><dt>视频</dt><dd><a href={withBase('/videos/')}>{videoCount}</a></dd></div> : null}
-        <div><dt>专注</dt><dd>Java · AI Agent</dd></div>
+        <div><dt>专注</dt><dd>Java · Python · AI Agent</dd></div>
       </dl>
     </div>
 
@@ -52,6 +52,7 @@ const { postCount, tagCount, videoCount } = Astro.props;
         <div class="ring-glow" aria-hidden="true"></div>
         <Image src={avatar} alt="周正 Zheng Zhou 的职业照" widths={[240, 360, 480, 640]} sizes="(max-width: 820px) 240px, 360px" loading="eager" fetchpriority="high" class="avatar" />
         <span class="chip chip-1" aria-hidden="true"><i></i>Java</span>
+        <span class="chip chip-4" aria-hidden="true"><i></i>Python</span>
         <span class="chip chip-2" aria-hidden="true"><i></i>AI Agent</span>
         <span class="chip chip-3" aria-hidden="true"><i></i>MCP</span>
       </div>
@@ -359,6 +360,11 @@ const { postCount, tagCount, videoCount } = Astro.props;
     bottom: 4%;
     animation-delay: -3.2s;
   }
+  .chip-4 {
+    right: -6%;
+    top: 4%;
+    animation-delay: -2.4s;
+  }
   @keyframes bob {
     50% {
       transform: translateY(-10px);
@@ -436,6 +442,10 @@ const { postCount, tagCount, videoCount } = Astro.props;
     }
     .chip-2 {
       right: -30%;
+    }
+    .chip-4 {
+      right: -18%;
+      top: 2%;
     }
     .signature {
       margin-top: 18px;

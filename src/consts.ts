@@ -2,7 +2,7 @@ export const SITE = {
   title: '周正 · Zheng Zhou',
   shortTitle: 'Zheng Zhou',
   description:
-    '周正（Jeff Chou / 正哥 / 爪哇爹）——程序员、Java & AI Agent 讲师、创作者。记录代码之外的思考、日常与成长。',
+    '周正（Jeff Chou / 正哥 / 爪哇爹）——程序员、Java & Python & AI Agent 讲师、创作者。记录代码之外的思考、日常与成长。',
   author: '周正 Zheng Zhou',
   locale: 'zh-CN',
   email: 'zhouzhengjeff@gmail.com',
@@ -12,7 +12,7 @@ export const SITE = {
   podcast: 'https://www.youtube.com/@BeyondCodeFM',
 };
 
-export const ROLES = ['程序员', 'Java & AI Agent 讲师', '创作者'];
+export const ROLES = ['程序员', 'Java & Python & AI Agent 讲师', '创作者'];
 
 export const NAV = [
   { href: '/', label: '首页' },

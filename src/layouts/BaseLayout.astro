@@ -15,7 +15,7 @@ interface Props {
   noindex?: boolean;
 }
 const { title, description = SITE.description, image, type = 'website', publishedTime, tags = [], noindex = false } = Astro.props;
-const fullTitle = title ? `${title} | ${SITE.title}` : `${SITE.title} — 程序员 · Java & AI Agent 讲师 · 创作者`;
+const fullTitle = title ? `${title} | ${SITE.title}` : `${SITE.title} — 程序员 · Java & Python & AI Agent 讲师 · 创作者`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image ?? withBase('/og.jpg'), Astro.site);
 const jsonLd =
@@ -36,7 +36,7 @@ const jsonLd =
         '@type': 'Person',
         name: '周正',
         alternateName: ['Zheng Zhou', 'Jeff Chou', '正哥', '爪哇爹'],
-        jobTitle: '程序员 / Java & AI Agent 讲师 / 创作者',
+        jobTitle: '程序员 / Java & Python & AI Agent 讲师 / 创作者',
         url: Astro.site?.toString(),
         email: `mailto:${SITE.email}`,
         sameAs: [SITE.github, SITE.x],
