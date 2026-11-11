@@ -1,5 +1,31 @@
 [
   {
+    "slug": "2026-11-11-github-trending-top10",
+    "title": "GitHub 今日热榜 Top 10（2026-11-11）",
+    "date": "2026-11-11",
+    "duration_sec": 594,
+    "width": 540,
+    "height": 960,
+    "poster": "posters/2026-11-11-github-trending-top10.webp",
+    "src": "videos/2026-11-11-github-trending-top10.mp4",
+    "size_mb": 5.99,
+    "category": "GitHub 热榜",
+    "description": "Meta 设计系统 astryx 单日 +2842 star 登顶，10 个热门项目里 8 个围绕 AI Agent。"
+  },
+  {
+    "slug": "2026-11-11-claude-glossary-23-features",
+    "title": "Claude 词典：23 个功能一次讲清",
+    "date": "2026-11-11",
+    "duration_sec": 477,
+    "width": 540,
+    "height": 960,
+    "poster": "posters/2026-11-11-claude-glossary-23-features.webp",
+    "src": "videos/2026-11-11-claude-glossary-23-features.mp4",
+    "size_mb": 5.32,
+    "category": "大模型与行业",
+    "description": "把 Claude 的 23 个新词分成 5 层，用一份周报串起来讲清，并按最新官方资料勘误。"
+  },
+  {
     "slug": "2026-11-10-rag-pipeline-8-steps",
     "title": "RAG 流水线八道工序",
     "date": "2026-11-10",
