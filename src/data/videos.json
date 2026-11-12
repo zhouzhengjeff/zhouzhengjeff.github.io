@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-11-12-github-trending-top10",
+    "title": "GitHub 今日热榜 Top 10（2026-11-12）",
+    "date": "2026-11-12",
+    "duration_sec": 615,
+    "width": 540,
+    "height": 960,
+    "poster": "posters/2026-11-12-github-trending-top10.webp",
+    "src": "videos/2026-11-12-github-trending-top10.mp4",
+    "size_mb": 5.98,
+    "category": "GitHub 热榜",
+    "description": "meta/astryx 单日涨 1789 star；AI 编程 Agent 技能包与本地推理项目扎堆上榜，附三条上手命令。"
+  },
+  {
     "slug": "2026-11-11-github-trending-top10",
     "title": "GitHub 今日热榜 Top 10（2026-11-11）",
     "date": "2026-11-11",
