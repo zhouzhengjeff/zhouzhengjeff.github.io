@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-11-13-github-trending-top10",
+    "title": "GitHub 今日热榜 Top 10（2026-11-13）",
+    "date": "2026-11-13",
+    "duration_sec": 716,
+    "width": 540,
+    "height": 960,
+    "poster": "posters/2026-11-13-github-trending-top10.webp",
+    "src": "videos/2026-11-13-github-trending-top10.mp4",
+    "size_mb": 6.06,
+    "category": "GitHub 热榜",
+    "description": "Chrome 团队 modern-web-guidance 单日 +1875 star，十个项目里 6 个围绕 AI Agent 与 AI 编程。"
+  },
+  {
     "slug": "2026-11-12-github-trending-top10",
     "title": "GitHub 今日热榜 Top 10（2026-11-12）",
     "date": "2026-11-12",
