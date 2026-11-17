@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-11-17-github-trending-top10",
+    "title": "GitHub 今日热榜 Top 10（2026-11-17）",
+    "date": "2026-11-17",
+    "duration_sec": 747,
+    "width": 540,
+    "height": 960,
+    "poster": "posters/2026-11-17-github-trending-top10.webp",
+    "src": "videos/2026-11-17-github-trending-top10.mp4",
+    "size_mb": 6.14,
+    "category": "GitHub 热榜",
+    "description": "superpowers 单日 +1905 star 居首，univer 紧随其后，十个项目里 9 个围绕 AI Agent 与 AI 编程。"
+  },
+  {
     "slug": "2026-11-16-github-trending-top10",
     "title": "GitHub 今日热榜 Top 10（2026-11-16）",
     "date": "2026-11-16",
