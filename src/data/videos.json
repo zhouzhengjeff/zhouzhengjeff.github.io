@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-11-18-github-trending-top10",
+    "title": "GitHub 今日热榜 Top 10（2026-11-18）",
+    "date": "2026-11-18",
+    "duration_sec": 750,
+    "width": 540,
+    "height": 960,
+    "poster": "posters/2026-11-18-github-trending-top10.webp",
+    "src": "videos/2026-11-18-github-trending-top10.mp4",
+    "size_mb": 6.08,
+    "category": "GitHub 热榜",
+    "description": "Claude-BugHunter 单日 +2322 star 居首，paper-orchestra 次之，前十里 7 个围绕 AI Agent，另有 Arcane、nvm、uv。"
+  },
+  {
     "slug": "2026-11-17-github-trending-top10",
     "title": "GitHub 今日热榜 Top 10（2026-11-17）",
     "date": "2026-11-17",
