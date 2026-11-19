@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-11-19-github-trending-top10",
+    "title": "GitHub 今日热榜 Top 10（2026-11-19）",
+    "date": "2026-11-19",
+    "duration_sec": 815,
+    "width": 540,
+    "height": 960,
+    "poster": "posters/2026-11-19-github-trending-top10.webp",
+    "src": "videos/2026-11-19-github-trending-top10.mp4",
+    "size_mb": 6.1,
+    "category": "GitHub 热榜",
+    "description": "obra/superpowers 单日 +2029 star 居首，十个项目里 7 个围绕 Agent 技能，nginx、OpenVINO、minimind 也在榜。"
+  },
+  {
     "slug": "2026-11-18-github-trending-top10",
     "title": "GitHub 今日热榜 Top 10（2026-11-18）",
     "date": "2026-11-18",
