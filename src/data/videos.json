@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-11-21-github-trending-top10",
+    "title": "GitHub 今日热榜 Top 10（2026-11-21）",
+    "date": "2026-11-21",
+    "duration_sec": 590,
+    "width": 540,
+    "height": 960,
+    "poster": "posters/2026-11-21-github-trending-top10.webp",
+    "src": "videos/2026-11-21-github-trending-top10.mp4",
+    "size_mb": 5.93,
+    "category": "GitHub 热榜",
+    "description": "Claude-BugHunter 单日 +1794 star 居首，firecrawl 次之，前十里 7 个围绕 AI Agent，nginx、OpenVINO、minimind 也在榜。"
+  },
+  {
     "slug": "2026-11-20-github-trending-top10",
     "title": "GitHub 今日热榜 Top 10（2026-11-20）",
     "date": "2026-11-20",
@@ -8,7 +21,7 @@
     "height": 960,
     "poster": "posters/2026-11-20-github-trending-top10.webp",
     "src": "videos/2026-11-20-github-trending-top10.mp4",
-    "size_mb": 6.45,
+    "size_mb": 7.85,
     "category": "GitHub 热榜",
     "description": "Claude-BugHunter 单日 +1349 star 居首，firecrawl 次之，前十里 7 个围绕 AI Agent，nginx、OpenVINO、minimind 也在榜。"
   },
