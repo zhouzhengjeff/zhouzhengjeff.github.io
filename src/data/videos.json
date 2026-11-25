@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-11-25-github-trending-top10",
+    "title": "GitHub 今日热榜 Top 10（2026-11-25）",
+    "date": "2026-11-25",
+    "duration_sec": 590,
+    "width": 540,
+    "height": 960,
+    "poster": "posters/2026-11-25-github-trending-top10.webp",
+    "src": "videos/2026-11-25-github-trending-top10.mp4",
+    "size_mb": 5.94,
+    "category": "GitHub 热榜",
+    "description": "Claude-BugHunter 单日 +1644 star 连续登顶，10 个项目中 7 个围绕 AI Agent，附上手命令。"
+  },
+  {
     "slug": "2026-11-24-github-trending-top10",
     "title": "GitHub 今日热榜 Top 10（2026-11-24）",
     "date": "2026-11-24",
