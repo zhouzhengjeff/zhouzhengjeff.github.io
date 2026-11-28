@@ -22,9 +22,9 @@ export const NAV = [
   { href: '/about/', label: '关于' },
 ];
 
-export type SeriesKey = 'beyond-working' | 'daily' | 'annual' | 'beyond-code';
+export type SeriesKey = 'beyond-working' | 'daily' | 'annual' | 'beyond-code' | 'tech-practice';
 
-export const SERIES: Record<SeriesKey, { title: string; en: string; desc: string; icon: 'compass' | 'coffee' | 'calendar' | 'mic' }> = {
+export const SERIES: Record<SeriesKey, { title: string; en: string; desc: string; icon: 'compass' | 'coffee' | 'calendar' | 'mic' | 'code' }> = {
   'beyond-working': {
     title: '工作之外系列',
     en: 'Beyond Working',
@@ -48,6 +48,12 @@ export const SERIES: Record<SeriesKey, { title: string; en: string; desc: string
     en: 'Beyond Code',
     desc: '播客「代码之外 Beyond Code」的随想与延伸。',
     icon: 'mic',
+  },
+  'tech-practice': {
+    title: '技术实战',
+    en: 'Tech Practice',
+    desc: 'AI Agent、Claude 与工程方法的实战拆解：能照着做、能验证的技术文章。',
+    icon: 'code',
   },
 };
 

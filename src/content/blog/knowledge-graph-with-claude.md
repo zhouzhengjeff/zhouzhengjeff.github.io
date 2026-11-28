@@ -2,6 +2,7 @@
 title: '别再让文件吃灰：用 Claude 把散落的文档织成一张"可追溯的知识图谱"'
 date: 2026-11-27
 description: '把散落的文档拆成实体、关系与出处，用 Claude 织成一张可追溯的知识图谱：六步流水线、实测数字，以及一段可以直接丢给 Claude Code 的实施 prompt。'
+series: tech-practice
 tags:
   - "Claude"
   - "AI Agent"

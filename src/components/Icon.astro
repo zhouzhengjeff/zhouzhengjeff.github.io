@@ -1,6 +1,6 @@
 ---
 interface Props {
-  name: 'github' | 'x' | 'mail' | 'rss' | 'arrow' | 'book' | 'user' | 'clock' | 'calendar' | 'tag' | 'menu' | 'close' | 'up' | 'mic' | 'compass' | 'coffee' | 'pen' | 'play' | 'film' | 'copy' | 'check' | 'prev' | 'next';
+  name: 'github' | 'x' | 'mail' | 'rss' | 'arrow' | 'book' | 'user' | 'clock' | 'calendar' | 'tag' | 'menu' | 'close' | 'up' | 'mic' | 'compass' | 'coffee' | 'pen' | 'play' | 'film' | 'copy' | 'check' | 'prev' | 'next' | 'code';
   size?: number;
   class?: string;
 }
@@ -30,6 +30,7 @@ const paths: Record<Props['name'], string> = {
   check: '<path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/>',
   prev: '<path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m15 5-7 7 7 7"/>',
   next: '<path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/>',
+  code: '<path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m8 7-5 5 5 5M16 7l5 5-5 5M13.5 5l-3 14"/>',
 };
 ---
 <svg class={cls} width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" set:html={paths[name]} />

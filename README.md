@@ -65,7 +65,7 @@ npm run check:links   # 检查 dist/ 中所有站内链接与资源是否存在
 title: "文章标题"
 date: 2026-01-01
 description: "一句话摘要（用于卡片与 SEO）"
-series: beyond-working   # 可选：beyond-working | daily | annual | beyond-code
+series: beyond-working   # 可选：beyond-working | daily | annual | beyond-code | tech-practice
 tags:
   - Java
   - AI Agent
